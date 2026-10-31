@@ -1,0 +1,48 @@
+@use "../abstracts/tokens" as *;
+@use "../abstracts/mixins" as *;
+
+.section-header {
+  max-width: 42rem;
+  margin-bottom: $space-6;
+}
+
+.section-header__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: $space-3;
+  margin-bottom: $space-4;
+  color: $color-cyan;
+  font-family: $font-display;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.section-header__eyebrow::before {
+  content: "";
+  width: 2.4rem;
+  height: 2px;
+  background: linear-gradient(90deg, $color-cyan, transparent);
+  box-shadow: 0 0 10px rgba($color-cyan, 0.65);
+}
+
+.section-header__title::after {
+  content: "";
+  display: block;
+  width: 4.5rem;
+  height: 1px;
+  margin-top: $space-4;
+  background: linear-gradient(90deg, rgba($color-cyan, 0.7), transparent);
+}
+
+.section-header__title {
+  color: $color-white;
+  font-size: clamp(1.85rem, 4vw, 3rem);
+}
+
+.section-header__lead {
+  margin-top: $space-4;
+  color: $color-muted;
+  font-size: 1.125rem;
+}

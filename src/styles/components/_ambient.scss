@@ -1,0 +1,88 @@
+@use "../abstracts/tokens" as *;
+@use "../abstracts/mixins" as *;
+
+.ambient {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.ambient__orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(48px);
+  opacity: 0.35;
+  will-change: transform;
+}
+
+.ambient__orb--a {
+  width: min(42vw, 28rem);
+  height: min(42vw, 28rem);
+  top: 12%;
+  left: -8%;
+  background: radial-gradient(circle, rgba($color-cyan, 0.55), transparent 70%);
+}
+
+.ambient__orb--b {
+  width: min(48vw, 34rem);
+  height: min(48vw, 34rem);
+  top: 48%;
+  right: -12%;
+  background: radial-gradient(circle, rgba($color-indigo, 0.55), transparent 72%);
+}
+
+.ambient__orb--c {
+  width: min(36vw, 22rem);
+  height: min(36vw, 22rem);
+  bottom: 8%;
+  left: 28%;
+  background: radial-gradient(circle, rgba($color-cyan-soft, 0.4), transparent 70%);
+}
+
+.ambient__grid {
+  position: absolute;
+  inset: -10%;
+  background-image:
+    linear-gradient(rgba($color-cyan, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba($color-cyan, 0.05) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: radial-gradient(circle at center, black 20%, transparent 78%);
+  opacity: 0.45;
+}
+
+.ambient__beam {
+  position: absolute;
+  width: 1px;
+  height: 140%;
+  top: -20%;
+  background: linear-gradient(transparent, rgba($color-cyan, 0.45), transparent);
+  opacity: 0.35;
+}
+
+.ambient__beam--1 {
+  left: 18%;
+  animation: ambient-drift 18s ease-in-out infinite alternate;
+}
+
+.ambient__beam--2 {
+  left: 72%;
+  animation: ambient-drift 22s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes ambient-drift {
+  from {
+    transform: translate3d(0, -3%, 0) rotate(8deg);
+  }
+
+  to {
+    transform: translate3d(0, 4%, 0) rotate(-4deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ambient__beam {
+    animation: none;
+  }
+}

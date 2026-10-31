@@ -1,0 +1,29 @@
+@use "../abstracts/tokens" as *;
+
+.icon-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 1px solid rgba($color-white, 0.28);
+  border-radius: 999px;
+  color: $color-white;
+  text-decoration: none;
+  transition:
+    border-color $transition-base,
+    color $transition-base,
+    background-color $transition-base;
+}
+
+.icon-link:hover,
+.icon-link:focus-visible {
+  border-color: $color-cyan;
+  color: $color-cyan;
+  background: rgba($color-cyan, 0.08);
+}
+
+.icon-link__glyph {
+  width: 1.1rem;
+  height: 1.1rem;
+}

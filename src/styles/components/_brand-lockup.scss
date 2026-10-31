@@ -1,0 +1,73 @@
+@use "../abstracts/tokens" as *;
+
+.brand-lockup {
+  display: inline-flex;
+  align-items: center;
+  gap: $space-3;
+  min-height: 2.5rem;
+}
+
+.brand-lockup__mark {
+  flex: 0 0 auto;
+  width: 2.35rem;
+  height: 2.35rem;
+  filter: drop-shadow(0 0 10px rgba($color-cyan, 0.35));
+
+  @media (min-width: $bp-sm) {
+    width: 2.55rem;
+    height: 2.55rem;
+  }
+}
+
+.brand-lockup__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.1rem;
+  line-height: 1;
+}
+
+.brand-lockup__name {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0;
+  font-family: $font-display;
+  font-size: 1.15rem;
+  letter-spacing: 0.02em;
+
+  @media (min-width: $bp-sm) {
+    font-size: 1.28rem;
+  }
+}
+
+.brand-lockup__home {
+  font-weight: 400;
+  color: $color-white;
+}
+
+.brand-lockup__spot {
+  font-weight: 700;
+  color: $color-cyan;
+}
+
+.brand-lockup__sub {
+  color: rgba($color-white, 0.88);
+  font-family: $font-display;
+  font-size: 0.58rem;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+
+  @media (min-width: $bp-sm) {
+    font-size: 0.62rem;
+  }
+}
+
+.brand-lockup--footer .brand-lockup__name {
+  font-size: 1.05rem;
+}
+
+.brand-lockup--footer .brand-lockup__sub {
+  font-size: 0.55rem;
+  letter-spacing: 0.24em;
+}

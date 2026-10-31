@@ -1,0 +1,47 @@
+@use "tokens" as *;
+
+@mixin respond-up($bp) {
+  @media (min-width: $bp) {
+    @content;
+  }
+}
+
+@mixin container {
+  width: 100%;
+  max-width: $container;
+  margin-inline: auto;
+  padding-inline: $gutter-inline;
+
+  @include respond-up($bp-md) {
+    padding-inline: $gutter-inline-md;
+  }
+
+  @include respond-up($bp-lg) {
+    padding-inline: $gutter-inline-lg;
+  }
+}
+
+@mixin focus-ring {
+  outline: 3px solid $color-focus;
+  outline-offset: 3px;
+}
+
+@mixin visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@mixin section-padding {
+  padding-block: $space-7;
+
+  @include respond-up($bp-md) {
+    padding-block: $space-9;
+  }
+}

@@ -1,0 +1,38 @@
+@use "../abstracts/tokens" as *;
+@use "../abstracts/mixins" as *;
+
+.home-intro {
+  display: grid;
+  gap: $space-6;
+
+  @include respond-up($bp-md) {
+    grid-template-columns: 0.95fr 1.05fr;
+    align-items: end;
+    gap: $space-8;
+  }
+}
+
+.home-intro__eyebrow {
+  margin: 0 0 $space-3;
+  color: $color-cyan;
+  font-family: $font-display;
+  font-size: 0.75rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.home-intro__title {
+  margin: 0;
+  color: $color-white;
+  font-size: clamp(1.85rem, 4vw, 2.75rem);
+  max-width: 16ch;
+}
+
+.home-intro__copy {
+  display: grid;
+  gap: $space-4;
+  margin-bottom: $space-5;
+  color: $color-muted-strong;
+  line-height: 1.75;
+  max-width: 58ch;
+}

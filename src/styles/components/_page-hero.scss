@@ -1,0 +1,62 @@
+@use "../abstracts/tokens" as *;
+@use "../abstracts/mixins" as *;
+
+.page-hero {
+  position: relative;
+  min-height: min(52vh, 28rem);
+  display: grid;
+  align-items: end;
+  overflow: hidden;
+  color: $color-white;
+}
+
+.page-hero__media {
+  position: absolute;
+  inset: 0;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.page-hero__veil {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba($color-navy, 0.78) 0%, rgba($color-oxford, 0.45) 55%, rgba($color-navy, 0.55) 100%),
+    linear-gradient(180deg, rgba($color-navy, 0.15) 0%, rgba($color-navy, 0.82) 100%);
+}
+
+.page-hero__content {
+  position: relative;
+  z-index: 1;
+  @include container;
+  width: 100%;
+  padding-block: calc(#{$header-h} + #{$space-6}) $space-7;
+  max-width: 46rem;
+}
+
+.page-hero__eyebrow {
+  margin: 0 0 $space-4;
+  color: $color-cyan;
+  font-family: $font-display;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.page-hero__title {
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  text-wrap: balance;
+}
+
+.page-hero__lead {
+  margin: $space-4 0 0;
+  color: $color-muted-strong;
+  font-size: 1.08rem;
+  line-height: 1.65;
+  max-width: 52ch;
+}

@@ -1,0 +1,50 @@
+@use "../abstracts/tokens" as *;
+@use "../abstracts/mixins" as *;
+
+.admin {
+  min-height: 100vh;
+  background: $color-oxford;
+  color: $color-fog;
+  padding: $space-6 $space-4;
+}
+
+.admin__shell {
+  width: min(100%, 56rem);
+  margin-inline: auto;
+  display: grid;
+  gap: $space-5;
+}
+
+.admin__card {
+  padding: $space-5;
+  border: 1px solid rgba($color-cyan, 0.22);
+  border-radius: $radius-m;
+  background: #001833;
+}
+
+.admin__title {
+  color: $color-white;
+  font-size: 1.75rem;
+}
+
+.admin__lead {
+  margin-top: $space-3;
+  color: $color-muted;
+}
+
+.admin__toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-3;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.admin__form {
+  display: grid;
+  gap: $space-4;
+}
+
+.admin__status {
+  color: $color-cyan;
+}

@@ -1,0 +1,96 @@
+@use "../abstracts/tokens" as *;
+@use "../abstracts/mixins" as *;
+
+.contact__layout {
+  display: grid;
+  gap: $space-6;
+
+  @include respond-up($bp-md) {
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: $space-8;
+  }
+}
+
+.contact__details {
+  display: grid;
+  gap: $space-4;
+  align-content: start;
+}
+
+.contact__aside-title {
+  margin: 0;
+  color: $color-white;
+  font-size: 1.35rem;
+}
+
+.contact__address {
+  margin: 0;
+  color: $color-fog;
+  font-style: normal;
+  line-height: 1.7;
+}
+
+.contact__email {
+  color: $color-cyan;
+  font-family: $font-display;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+}
+
+.contact__email:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.contact__form {
+  display: grid;
+  gap: $space-4;
+  padding: $space-5;
+  border: 1px solid rgba($color-cyan, 0.22);
+  border-radius: $radius-m;
+  background: rgba($color-surface, 0.72);
+}
+
+.field {
+  display: grid;
+  gap: $space-2;
+}
+
+.field__label {
+  color: $color-white;
+  font-family: $font-display;
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.field__control {
+  width: 100%;
+  min-height: 3rem;
+  padding: 0.85rem 1rem;
+  border: 1px solid rgba($color-white, 0.22);
+  border-radius: $radius-s;
+  background: rgba($color-surface-alt, 0.45);
+  color: $color-white;
+}
+
+.field__control:focus {
+  border-color: $color-cyan;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba($color-cyan, 0.28);
+}
+
+.field__control--area {
+  min-height: 9rem;
+  resize: vertical;
+}
+
+.field__error {
+  color: #ffb4b4;
+  font-size: 0.875rem;
+}
+
+.contact__status {
+  margin: 0;
+  color: $color-cyan;
+}

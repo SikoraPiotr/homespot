@@ -1,0 +1,78 @@
+@use "../abstracts/tokens" as *;
+@use "../abstracts/mixins" as *;
+
+.about-story__grid {
+  display: grid;
+  gap: $space-6;
+  align-items: center;
+
+  @include respond-up($bp-md) {
+    grid-template-columns: 1fr 1fr;
+    gap: $space-8;
+  }
+}
+
+.about-story__block--reverse .about-story__grid {
+  @include respond-up($bp-md) {
+    direction: rtl;
+
+    > * {
+      direction: ltr;
+    }
+  }
+}
+
+.about-story__eyebrow {
+  margin: 0 0 $space-3;
+  color: $color-cyan;
+  font-family: $font-display;
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.about-story__title {
+  margin: 0 0 $space-4;
+  color: $color-white;
+  font-size: clamp(1.5rem, 3vw, 2.1rem);
+}
+
+.about-story__text {
+  display: grid;
+  gap: $space-4;
+  color: $color-muted-strong;
+  line-height: 1.75;
+  font-size: 1.02rem;
+
+  p {
+    margin: 0;
+  }
+}
+
+.about-story__figure {
+  position: relative;
+  margin: 0;
+  min-height: 16rem;
+  border-radius: $radius-m;
+  overflow: hidden;
+  border: 1px solid rgba($color-cyan, 0.22);
+  box-shadow: $shadow-soft;
+
+  @include respond-up($bp-md) {
+    min-height: 22rem;
+  }
+
+  img {
+    object-fit: cover;
+  }
+}
+
+.about-story__closing-text {
+  margin: 0;
+  max-width: 48rem;
+  color: $color-fog;
+  font-family: $font-display;
+  font-size: clamp(1.2rem, 2.5vw, 1.55rem);
+  line-height: 1.5;
+  text-wrap: balance;
+}

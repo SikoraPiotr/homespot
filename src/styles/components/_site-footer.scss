@@ -1,0 +1,42 @@
+@use "../abstracts/tokens" as *;
+@use "../abstracts/mixins" as *;
+
+.site-footer {
+  border-top: 1px solid rgba($color-cyan, 0.18);
+  background: $color-rich-black;
+  padding-block: $space-6;
+}
+
+.site-footer__inner {
+  @include container;
+  display: grid;
+  gap: $space-4;
+
+  @include respond-up($bp-sm) {
+    grid-template-columns: 1fr auto;
+    align-items: center;
+  }
+}
+
+.site-footer__brand-block {
+  display: grid;
+  gap: $space-3;
+}
+
+.site-footer__logotyp {
+  width: auto;
+  height: 2.2rem;
+  filter: drop-shadow(0 0 12px rgba($color-cyan, 0.25));
+}
+
+.site-footer__copy {
+  color: $color-muted;
+  font-size: 0.9rem;
+}
+
+.site-footer__brand {
+  color: $color-cyan;
+  font-family: $font-display;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}

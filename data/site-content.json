@@ -1,0 +1,266 @@
+{
+  "meta": {
+    "title": "Homespot Nieruchomości | Twoje miejsce zwane domem",
+    "description": "Homespot Nieruchomości w Poznaniu. Sprzedaż, zakup, wynajem, zarządzanie najmem, finansowanie, inwestycje i analiza rynku."
+  },
+  "hero": {
+    "slogan": "TWOJE MIEJSCE ZWANE DOMEM",
+    "socialHeading": "Bądź na bieżąco",
+    "backgroundImage": "/media/poznan-hero.jpg",
+    "backgroundAlt": "Panorama Poznania o zmierzchu"
+  },
+  "home": {
+    "intro": {
+      "eyebrow": "O nas",
+      "title": "Dostrzegamy potencjał miejsca",
+      "paragraphs": [
+        "Homespot to trzy doświadczenia rynku nieruchomości połączone wspólną ideą: skuteczne pośrednictwo zaczyna się od zrozumienia człowieka, a nie samej oferty.",
+        "Pomagamy znaleźć dom, inwestycję lub najem. Towarzyszymy Ci ze spokojem, jasnymi warunkami i jako partner na każdym etapie."
+      ],
+      "ctaLabel": "Poznaj naszą historię",
+      "ctaHref": "/o-nas"
+    },
+    "tiles": [
+      {
+        "id": "services",
+        "title": "Usługi",
+        "description": "Sprzedaż, wynajem, finansowanie i analiza rynku.",
+        "href": "/uslugi",
+        "imageSrc": "/media/keys-handover.jpg",
+        "imageAlt": "Przekazanie kluczy do nowego mieszkania"
+      },
+      {
+        "id": "offers",
+        "title": "Oferty",
+        "description": "Aktualne nieruchomości w Poznaniu i okolicach.",
+        "href": "/oferty",
+        "imageSrc": "/media/apartment-view.jpg",
+        "imageAlt": "Nowoczesny salon z widokiem"
+      },
+      {
+        "id": "team",
+        "title": "Zespół",
+        "description": "Trzy osoby, jeden standard obsługi.",
+        "href": "/zespol",
+        "imageSrc": "/media/office-consult.jpg",
+        "imageAlt": "Spotkanie doradcze w biurze"
+      },
+      {
+        "id": "contact",
+        "title": "Kontakt",
+        "description": "Grochowska 63. Napisz lub zadzwoń.",
+        "href": "/kontakt",
+        "imageSrc": "/media/home-exterior.jpg",
+        "imageAlt": "Nowoczesna bryła domu"
+      }
+    ]
+  },
+  "about": {
+    "eyebrow": "O nas",
+    "title": "Homespot Nieruchomości",
+    "lead": "Znajdźmy wspólnie „Twoje miejsce zwane domem”.",
+    "closing": "Homespot Nieruchomości. Wspólnie znajdźmy „Twoje miejsce zwane domem!”.",
+    "pageHeroImage": "/media/interior-living.jpg",
+    "pageHeroAlt": "Jasny, elegancki salon",
+    "sections": [
+      {
+        "id": "meaning",
+        "eyebrow": "Filozofia",
+        "title": "Więcej niż cztery ściany",
+        "paragraphs": [
+          "W Homespot Nieruchomości wierzymy, że dom to coś więcej niż cztery ściany i adres. To miejsce, z którym wiążemy plany, wspomnienia i marzenia.",
+          "Nie zawsze od razu wiemy, czego szukamy. Czasem dopiero na swojej drodze odkrywamy miejsce, które okazuje się dokładnie tym, którego potrzebowaliśmy. Dostrzegamy w nieruchomościach nie tylko ich obecny charakter, ale również możliwości, jakie ze sobą niosą."
+        ],
+        "imageSrc": "/media/interior-living.jpg",
+        "imageAlt": "Stylowy salon z dużymi oknami"
+      },
+      {
+        "id": "team",
+        "eyebrow": "Zespół",
+        "title": "Trzy doświadczenia, jeden standard",
+        "paragraphs": [
+          "Jesteśmy zespołem trzech doświadczonych praktyków rynku nieruchomości, których połączyło wspólne podejście do pracy i przekonanie, że skuteczne pośrednictwo zaczyna się od zrozumienia drugiego człowieka.",
+          "A największą satysfakcję daje nam moment, w którym właściwe miejsce spotyka właściwego człowieka."
+        ],
+        "imageSrc": "/media/office-consult.jpg",
+        "imageAlt": "Konsultacja przy stole w biurze"
+      },
+      {
+        "id": "name",
+        "eyebrow": "Marka",
+        "title": "Home + spot",
+        "paragraphs": [
+          "Homespot to nazwa, która odzwierciedla naszą filozofię działania. Powstała z połączenia dwóch słów: „home”, czyli „dom”, oraz „spot”, czyli „miejsce”, a także (jako czasownik) „dostrzec”, „zauważyć” i „odnaleźć”.",
+          "Nie chodzi wyłącznie o znalezienie nieruchomości, lecz o dostrzeżenie jej potencjału, odkrycie tego, co naprawdę ważne dla klienta, i połączenie właściwych ludzi z właściwym miejscem."
+        ],
+        "imageSrc": "/media/villa-modern.jpg",
+        "imageAlt": "Nowoczesna willa o zmierzchu"
+      },
+      {
+        "id": "approach",
+        "eyebrow": "Podejście",
+        "title": "Twoja definicja domu",
+        "paragraphs": [
+          "Wiemy, że każdy ma własną definicję domu. Dla jednych będzie to pierwsze mieszkanie, dla innych przestronny dom dla rodziny, inwestycja na przyszłość lub po prostu nowy początek w zupełnie innym miejscu.",
+          "Dlatego nie działamy według jednego schematu. Słuchamy, doradzamy i szukamy rozwiązań dopasowanych do indywidualnych potrzeb, oczekiwań oraz możliwości."
+        ],
+        "imageSrc": "/media/interior-bedroom.jpg",
+        "imageAlt": "Przytulna sypialnia w apartamencie"
+      },
+      {
+        "id": "process",
+        "eyebrow": "Proces",
+        "title": "Partner na każdym etapie",
+        "paragraphs": [
+          "W codziennej pracy stawiamy na profesjonalizm, zaangażowanie, partnerskie relacje i wzajemne zaufanie. Łączymy doświadczenie z indywidualnym podejściem, dbając o to, aby proces kupna, sprzedaży czy wynajmu nieruchomości był możliwie prosty i komfortowy.",
+          "Chcemy, aby nasi klienci czuli, że mają po swojej stronie ludzi, którym mogą powierzyć swoje plany i którzy pomogą im płynnie przejść przez kolejne etapy transakcji."
+        ],
+        "imageSrc": "/media/keys-handover.jpg",
+        "imageAlt": "Klucze do nowego lokalu"
+      },
+      {
+        "id": "promise",
+        "eyebrow": "Obietnica",
+        "title": "Wiedzieć, gdzie patrzeć",
+        "paragraphs": [
+          "Homespot to dla nas coś więcej niż nazwa biura. To sposób myślenia o nieruchomościach i ludziach, którzy za nimi stoją.",
+          "Nie zawsze łatwo znaleźć to, czego się szuka. Czasem trzeba po prostu wiedzieć, gdzie i jak patrzeć. My jesteśmy po to, aby Ci w tym pomóc."
+        ],
+        "imageSrc": "/media/apartment-view.jpg",
+        "imageAlt": "Widok z apartamentu na miasto"
+      }
+    ]
+  },
+  "services": {
+    "eyebrow": "Usługi",
+    "title": "Usługi",
+    "items": [
+      {
+        "id": "sale-buy",
+        "title": "Sprzedaż | Zakup",
+        "subtitle": "Dobre decyzje zaczynają się od właściwego partnera.",
+        "description": "Prowadzimy transakcje z dbałością o każdy szczegół. Łączymy znajomość rynku, przemyślaną strategię i skuteczne negocjacje, aby pomóc Ci osiągnąć najlepszy możliwy rezultat.",
+        "imageSrc": "/media/home-exterior.jpg",
+        "imageAlt": "Nowoczesny dom jednorodzinny"
+      },
+      {
+        "id": "rent",
+        "title": "Wynajem | Najem",
+        "subtitle": "Właściwa nieruchomość. Właściwi ludzie. Dobre warunki.",
+        "description": "Pomagamy znaleźć nieruchomość dopasowaną do Twoich potrzeb lub najemcę, któremu możesz zaufać. Dbamy o sprawny proces, przejrzyste warunki i bezpieczeństwo współpracy.",
+        "imageSrc": "/media/interior-living.jpg",
+        "imageAlt": "Salon w mieszkaniu na wynajem"
+      },
+      {
+        "id": "management",
+        "title": "Zarządzanie najmem",
+        "subtitle": "Twoja nieruchomość. Nasza odpowiedzialność.",
+        "description": "Zarządzamy najmem kompleksowo, dbając o relacje z najemcami, bieżące sprawy i sprawną obsługę nieruchomości. Ty zachowujesz kontrolę nad swoją inwestycją, oszczędzając czas i energię.",
+        "imageSrc": "/media/apartment-view.jpg",
+        "imageAlt": "Apartament z widokiem"
+      },
+      {
+        "id": "finance",
+        "title": "Finansowanie",
+        "subtitle": "Kapitał, który otwiera możliwości.",
+        "description": "Pomagamy analizować dostępne rozwiązania finansowe i dopasować je do Twoich planów. Wspieramy Cię w przygotowaniu do zakupu, aby decyzje dotyczące finansowania były świadome i przemyślane.",
+        "imageSrc": "/media/office-consult.jpg",
+        "imageAlt": "Spotkanie w biurze"
+      },
+      {
+        "id": "invest",
+        "title": "Inwestycje",
+        "subtitle": "Dostrzegamy potencjał. Budujemy wartość.",
+        "description": "Analizujemy nieruchomości pod kątem rentowności, ryzyka i możliwości wzrostu wartości. Pomagamy przekładać cele inwestycyjne na konkretne strategie, oparte na danych, doświadczeniu i znajomości rynku.",
+        "imageSrc": "/media/villa-modern.jpg",
+        "imageAlt": "Prestiżowa nieruchomość"
+      },
+      {
+        "id": "analysis",
+        "title": "Analiza rynku",
+        "subtitle": "Wiedza, która daje przewagę.",
+        "description": "Łączymy analizę cen, trendów i lokalnych uwarunkowań, aby lepiej ocenić wartość nieruchomości oraz jej potencjał. Dostarczamy argumentów, które pomagają podejmować decyzje oparte na faktach, a nie przypuszczeniach.",
+        "imageSrc": "/media/kitchen-modern.jpg",
+        "imageAlt": "Nowoczesna kuchnia w mieszkaniu"
+      }
+    ]
+  },
+  "offers": {
+    "eyebrow": "Oferty",
+    "title": "Oferty",
+    "description": "Aktualne nieruchomości Homespot znajdziesz na portalu online. Przejdź do pełnej bazy ofert i wybierz to, co pasuje do Twoich planów.",
+    "ctaLabel": "Zobacz oferty",
+    "ctaHref": "https://homespot-nieruchomosci.nieruchomosci-online.pl",
+    "pageHeroImage": "/media/apartment-view.jpg",
+    "pageHeroAlt": "Przestronny salon z widokiem"
+  },
+  "team": {
+    "eyebrow": "Zespół",
+    "title": "Zespół",
+    "intro": "Na ten moment trzy osoby. Odwróć kartę, aby zobaczyć dane kontaktowe.",
+    "pageHeroImage": "/media/interior-dining.jpg",
+    "pageHeroAlt": "Jadalnia w eleganckim wnętrzu",
+    "members": [
+      {
+        "id": "member-1",
+        "name": "Członek zespołu",
+        "role": "Pośrednik",
+        "email": "biuro@homespot.com.pl",
+        "phone": "+48 000 000 000",
+        "imageSrc": "/media/team-1.jpg",
+        "imageAlt": "Portret członka zespołu Homespot"
+      },
+      {
+        "id": "member-2",
+        "name": "Członek zespołu",
+        "role": "Pośrednik",
+        "email": "biuro@homespot.com.pl",
+        "phone": "+48 000 000 000",
+        "imageSrc": "/media/team-2.jpg",
+        "imageAlt": "Portret członka zespołu Homespot"
+      },
+      {
+        "id": "member-3",
+        "name": "Członek zespołu",
+        "role": "Pośrednik",
+        "email": "biuro@homespot.com.pl",
+        "phone": "+48 000 000 000",
+        "imageSrc": "/media/team-3.jpg",
+        "imageAlt": "Portret członka zespołu Homespot"
+      }
+    ]
+  },
+  "contact": {
+    "eyebrow": "Kontakt",
+    "title": "Formularz kontaktowy",
+    "addressLines": ["Grochowska 63", "60-339 Poznań"],
+    "email": "biuro@homespot.com.pl",
+    "formSuccess": "Dziękujemy. Wiadomość została wysłana. Odezwemy się wkrótce na podany adres e-mail.",
+    "pageHeroImage": "/media/poznan-hero.jpg",
+    "pageHeroAlt": "Panorama miasta Poznań"
+  },
+  "social": [
+    {
+      "id": "instagram",
+      "label": "Instagram",
+      "href": "https://www.instagram.com/"
+    },
+    {
+      "id": "facebook",
+      "label": "Facebook",
+      "href": "https://www.facebook.com/"
+    },
+    {
+      "id": "linkedin",
+      "label": "LinkedIn",
+      "href": "https://www.linkedin.com/"
+    }
+  ],
+  "navigation": [
+    { "id": "about", "label": "O nas", "href": "/o-nas" },
+    { "id": "services", "label": "Usługi", "href": "/uslugi" },
+    { "id": "offers", "label": "Oferty", "href": "/oferty" },
+    { "id": "team", "label": "Zespół", "href": "/zespol" },
+    { "id": "contact", "label": "Kontakt", "href": "/kontakt" }
+  ]
+}

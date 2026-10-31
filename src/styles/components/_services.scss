@@ -1,0 +1,16 @@
+@use "../abstracts/tokens" as *;
+@use "../abstracts/mixins" as *;
+
+.services__grid {
+  display: grid;
+  gap: $space-4;
+  grid-template-columns: 1fr;
+
+  @include respond-up($bp-sm) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include respond-up($bp-lg) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
