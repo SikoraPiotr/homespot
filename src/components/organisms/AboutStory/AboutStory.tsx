@@ -28,6 +28,14 @@ export function AboutStory({ content }: AboutStoryProps) {
                     <p key={paragraph.slice(0, 28)}>{paragraph}</p>
                   ))}
                 </div>
+                {section.highlight ? (
+                  <p className="about-story__highlight">
+                    <span>{section.highlight}</span>
+                    {section.highlightLabel ? (
+                      <span className="about-story__highlight-label">{section.highlightLabel}</span>
+                    ) : null}
+                  </p>
+                ) : null}
               </div>
             </Reveal>
             <Reveal delay={2}>

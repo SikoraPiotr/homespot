@@ -49,6 +49,25 @@
   }
 }
 
+.about-story__highlight {
+  display: grid;
+  gap: $space-2;
+  margin: $space-5 0 0;
+  padding-top: $space-4;
+  border-top: 1px solid rgba($color-cyan, 0.35);
+  color: $color-fog;
+  font-size: 1.05rem;
+  line-height: 1.55;
+}
+
+.about-story__highlight-label {
+  color: $color-cyan;
+  font-family: $font-display;
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
 .about-story__figure {
   position: relative;
   margin: 0;

@@ -22,22 +22,6 @@
   pointer-events: none;
 }
 
-.hero::after {
-  content: "";
-  position: absolute;
-  inset: 12% 8% auto auto;
-  width: min(28vw, 16rem);
-  height: min(28vw, 16rem);
-  z-index: 2;
-  border: 1px solid rgba($color-cyan, 0.35);
-  border-radius: 50%;
-  box-shadow:
-    0 0 0 18px rgba($color-cyan, 0.04),
-    inset 0 0 40px rgba($color-cyan, 0.08);
-  animation: hero-ring 16s linear infinite;
-  pointer-events: none;
-}
-
 .hero__media {
   position: absolute;
   inset: 0;
@@ -158,16 +142,6 @@
   }
 }
 
-@keyframes hero-ring {
-  from {
-    transform: rotate(0deg) scale(1);
-  }
-
-  to {
-    transform: rotate(360deg) scale(1.08);
-  }
-}
-
 @keyframes hero-float {
   0%,
   100% {
@@ -185,8 +159,7 @@
   .hero__media img,
   .hero__sheen,
   .hero__particle,
-  .hero::before,
-  .hero::after {
+  .hero::before {
     animation: none;
   }
 

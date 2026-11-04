@@ -1,6 +1,6 @@
 "use client";
 
-import { BrandLockup } from "@/components/atoms/BrandLockup/BrandLockup";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -81,7 +81,14 @@ export function SiteHeader({ navigation }: SiteHeaderProps) {
       <header className={cn("site-header", showSolid && "is-solid")}>
         <div className="site-header__inner">
           <Link className="site-header__brand" href="/" aria-label="Homespot Nieruchomości, strona startowa">
-            <BrandLockup />
+            <Image
+              className="site-header__logo"
+              src="/brand/logotyp-white-flat.svg"
+              alt=""
+              width={768}
+              height={215}
+              priority
+            />
           </Link>
 
           <nav className="site-header__nav" aria-label="Główne">

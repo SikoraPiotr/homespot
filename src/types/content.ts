@@ -30,6 +30,8 @@ export type AboutSection = {
   paragraphs: string[];
   imageSrc: string;
   imageAlt: string;
+  highlight?: string;
+  highlightLabel?: string;
 };
 
 export type HomeTile = {
@@ -39,6 +41,33 @@ export type HomeTile = {
   href: string;
   imageSrc: string;
   imageAlt: string;
+};
+
+export type ProcessStep = {
+  id: string;
+  title: string;
+  text: string;
+};
+
+export type ProcessContent = {
+  eyebrow: string;
+  title: string;
+  steps: ProcessStep[];
+};
+
+export type OfferCard = {
+  id: string;
+  title: string;
+  href: string;
+  imageSrc: string;
+  imageAlt: string;
+};
+
+export type ReviewItem = {
+  id: string;
+  author: string;
+  quote: string;
+  rating: number;
 };
 
 export type SiteContent = {
@@ -60,6 +89,7 @@ export type SiteContent = {
       ctaLabel: string;
       ctaHref: string;
     };
+    process: ProcessContent;
     tiles: HomeTile[];
   };
   about: {
@@ -84,6 +114,15 @@ export type SiteContent = {
     ctaHref: string;
     pageHeroImage: string;
     pageHeroAlt: string;
+    items: OfferCard[];
+  };
+  reviews: {
+    eyebrow: string;
+    title: string;
+    lead: string;
+    pageHeroImage: string;
+    pageHeroAlt: string;
+    items: ReviewItem[];
   };
   team: {
     eyebrow: string;

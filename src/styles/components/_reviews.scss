@@ -1,0 +1,62 @@
+@use "../abstracts/tokens" as *;
+@use "../abstracts/mixins" as *;
+
+.reviews__grid {
+  display: grid;
+  gap: $space-4;
+  @include respond-up($bp-sm) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.reviews__item {
+  height: 100%;
+}
+
+.reviews__empty {
+  margin: 0;
+  max-width: 36rem;
+  color: $color-muted-strong;
+}
+
+.review-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: $space-5;
+  height: 100%;
+  margin: 0;
+  padding: $space-5;
+  border: 1px solid rgba($color-cyan, 0.22);
+  border-radius: $radius-m;
+  background: rgba($color-surface, 0.55);
+}
+
+.review-card__quote {
+  margin: 0;
+
+  p {
+    margin: 0;
+    color: $color-fog;
+    font-size: 1.02rem;
+    line-height: 1.7;
+  }
+}
+
+.review-card__meta {
+  display: grid;
+  gap: $space-2;
+}
+
+.review-card__stars {
+  color: $color-cyan;
+  letter-spacing: 0.12em;
+  font-size: 0.95rem;
+}
+
+.review-card__author {
+  color: $color-white;
+  font-family: $font-display;
+  font-size: 0.92rem;
+  letter-spacing: 0.04em;
+}

@@ -12,13 +12,59 @@
   "home": {
     "intro": {
       "eyebrow": "O nas",
-      "title": "Dostrzegamy potencjał miejsca",
+      "title": "Różne drogi - wspólny kierunek",
       "paragraphs": [
-        "Homespot to trzy doświadczenia rynku nieruchomości połączone wspólną ideą: skuteczne pośrednictwo zaczyna się od zrozumienia człowieka, a nie samej oferty.",
-        "Pomagamy znaleźć dom, inwestycję lub najem. Towarzyszymy Ci ze spokojem, jasnymi warunkami i jako partner na każdym etapie."
+        "Homespot to różne doświadczenia życiowe, które łączy wspólna idea. Wierzymy, że skuteczne pośrednictwo zaczyna się od zrozumienia człowieka, a nie samej oferty.",
+        "W tej drodze towarzyszymy Ci na każdym jej etapie, w partnerskich relacjach, spokoju i w pełni bezpieczeństwa."
       ],
       "ctaLabel": "Poznaj naszą historię",
       "ctaHref": "/o-nas"
+    },
+    "process": {
+      "eyebrow": "Proces",
+      "title": "Jesteśmy na każdym etapie",
+      "steps": [
+        {
+          "id": "contact",
+          "title": "Pierwszy kontakt",
+          "text": "Rozmawiamy o Twojej sytuacji i oczekiwaniach."
+        },
+        {
+          "id": "needs",
+          "title": "Poznanie potrzeb",
+          "text": "Słuchamy, analizujemy i dopasowujemy rozwiązania do Twoich potrzeb."
+        },
+        {
+          "id": "goals",
+          "title": "Określenie celów",
+          "text": "Wspólnie ustalamy konkretny cel i plan działania."
+        },
+        {
+          "id": "strategy",
+          "title": "Wdrożenie strategii",
+          "text": "Przekładamy ustalenia na konkretne działania i harmonogram."
+        },
+        {
+          "id": "delivery",
+          "title": "Realizacja zadań",
+          "text": "Działamy zgodnie z planem, dbając o sprawny i bezpieczny proces."
+        },
+        {
+          "id": "negotiation",
+          "title": "Negocjacje",
+          "text": "Dbamy o Twoje interesy i wypracowujemy najlepsze warunki."
+        },
+        {
+          "id": "formalities",
+          "title": "Formalności",
+          "text": "Kompletujemy dokumenty, koordynujemy proces i czuwamy nad jego bezpieczeństwem."
+        },
+        {
+          "id": "success",
+          "title": "Sukces",
+          "text": "Finalizujemy transakcję i osiągamy wspólnie wyznaczony cel."
+        }
+      ]
     },
     "tiles": [
       {
@@ -64,76 +110,49 @@
     "pageHeroAlt": "Jasny, elegancki salon",
     "sections": [
       {
-        "id": "meaning",
-        "eyebrow": "Filozofia",
+        "id": "idea",
+        "eyebrow": "Idea",
         "title": "Więcej niż cztery ściany",
         "paragraphs": [
-          "W Homespot Nieruchomości wierzymy, że dom to coś więcej niż cztery ściany i adres. To miejsce, z którym wiążemy plany, wspomnienia i marzenia.",
-          "Nie zawsze od razu wiemy, czego szukamy. Czasem dopiero na swojej drodze odkrywamy miejsce, które okazuje się dokładnie tym, którego potrzebowaliśmy. Dostrzegamy w nieruchomościach nie tylko ich obecny charakter, ale również możliwości, jakie ze sobą niosą."
+          "W Homespot Nieruchomości wierzymy, że dom to coś więcej niż cztery ściany i pusty adres. To miejsce, z którym wiążemy plany, wspomnienia i marzenia.",
+          "Nie zawsze od razu wiemy, czego szukamy. Czasem dopiero na swojej drodze odkrywamy miejsce, które okazuje się dokładnie tym, którego potrzebowaliśmy. Dostrzegamy w nieruchomościach nie tylko ich obecny charakter, ale również możliwości, jakie ze sobą niosą. A największą satysfakcję daje nam moment, w którym właściwe miejsce spotyka właściwego człowieka."
         ],
+        "highlight": "Skuteczne pośrednictwo zaczyna się od zrozumienia drugiego człowieka.",
+        "highlightLabel": "Rozmowa i komunikacja",
         "imageSrc": "/media/interior-living.jpg",
         "imageAlt": "Stylowy salon z dużymi oknami"
       },
       {
-        "id": "team",
-        "eyebrow": "Zespół",
-        "title": "Trzy doświadczenia, jeden standard",
-        "paragraphs": [
-          "Jesteśmy zespołem trzech doświadczonych praktyków rynku nieruchomości, których połączyło wspólne podejście do pracy i przekonanie, że skuteczne pośrednictwo zaczyna się od zrozumienia drugiego człowieka.",
-          "A największą satysfakcję daje nam moment, w którym właściwe miejsce spotyka właściwego człowieka."
-        ],
-        "imageSrc": "/media/office-consult.jpg",
-        "imageAlt": "Konsultacja przy stole w biurze"
-      },
-      {
-        "id": "name",
-        "eyebrow": "Marka",
+        "id": "origin",
+        "eyebrow": "Geneza",
         "title": "Home + spot",
         "paragraphs": [
           "Homespot to nazwa, która odzwierciedla naszą filozofię działania. Powstała z połączenia dwóch słów: „home”, czyli „dom”, oraz „spot”, czyli „miejsce”, a także (jako czasownik) „dostrzec”, „zauważyć” i „odnaleźć”.",
           "Nie chodzi wyłącznie o znalezienie nieruchomości, lecz o dostrzeżenie jej potencjału, odkrycie tego, co naprawdę ważne dla klienta, i połączenie właściwych ludzi z właściwym miejscem."
         ],
+        "highlight": "Słuchamy, doradzamy i szukamy rozwiązań dopasowanych do Twoich potrzeb.",
+        "highlightLabel": "Opieka i profesjonalizm",
         "imageSrc": "/media/villa-modern.jpg",
         "imageAlt": "Nowoczesna willa o zmierzchu"
       },
       {
-        "id": "approach",
-        "eyebrow": "Podejście",
-        "title": "Twoja definicja domu",
+        "id": "partnership",
+        "eyebrow": "Partnerstwo",
+        "title": "Twój partner na każdym etapie",
         "paragraphs": [
-          "Wiemy, że każdy ma własną definicję domu. Dla jednych będzie to pierwsze mieszkanie, dla innych przestronny dom dla rodziny, inwestycja na przyszłość lub po prostu nowy początek w zupełnie innym miejscu.",
-          "Dlatego nie działamy według jednego schematu. Słuchamy, doradzamy i szukamy rozwiązań dopasowanych do indywidualnych potrzeb, oczekiwań oraz możliwości."
-        ],
-        "imageSrc": "/media/interior-bedroom.jpg",
-        "imageAlt": "Przytulna sypialnia w apartamencie"
-      },
-      {
-        "id": "process",
-        "eyebrow": "Proces",
-        "title": "Partner na każdym etapie",
-        "paragraphs": [
-          "W codziennej pracy stawiamy na profesjonalizm, zaangażowanie, partnerskie relacje i wzajemne zaufanie. Łączymy doświadczenie z indywidualnym podejściem, dbając o to, aby proces kupna, sprzedaży czy wynajmu nieruchomości był możliwie prosty i komfortowy.",
-          "Chcemy, aby nasi klienci czuli, że mają po swojej stronie ludzi, którym mogą powierzyć swoje plany i którzy pomogą im płynnie przejść przez kolejne etapy transakcji."
+          "W codziennej pracy stawiamy na profesjonalizm, zaangażowanie, partnerskie relacje i wzajemne zaufanie. Łączymy doświadczenie z indywidualnym podejściem, dbając o to, aby proces kupna, sprzedaży czy wynajmu nieruchomości był możliwie prosty i jak najbardziej komfortowy.",
+          "Chcemy, aby nasi klienci czuli, że mają po swojej stronie ludzi, którym mogą powierzyć swoje plany i którzy pomogą im płynnie przejść przez kolejne etapy transakcji.",
+          "Homespot to dla nas coś więcej niż nazwa biura. To sposób myślenia o nieruchomościach i ludziach, którzy za nimi stoją. To satysfakcja z momentu, w którym poszukiwania dobiegają końca, a ktoś może powiedzieć: „To jest właśnie to miejsce”.",
+          "Nie zawsze łatwo znaleźć to, czego się szuka. Czasem trzeba po prostu wiedzieć, gdzie i jak patrzeć. My jesteśmy po to, aby Ci w tym pomóc."
         ],
         "imageSrc": "/media/keys-handover.jpg",
         "imageAlt": "Klucze do nowego lokalu"
-      },
-      {
-        "id": "promise",
-        "eyebrow": "Obietnica",
-        "title": "Wiedzieć, gdzie patrzeć",
-        "paragraphs": [
-          "Homespot to dla nas coś więcej niż nazwa biura. To sposób myślenia o nieruchomościach i ludziach, którzy za nimi stoją.",
-          "Nie zawsze łatwo znaleźć to, czego się szuka. Czasem trzeba po prostu wiedzieć, gdzie i jak patrzeć. My jesteśmy po to, aby Ci w tym pomóc."
-        ],
-        "imageSrc": "/media/apartment-view.jpg",
-        "imageAlt": "Widok z apartamentu na miasto"
       }
     ]
   },
   "services": {
     "eyebrow": "Usługi",
-    "title": "Usługi",
+    "title": "Jesteśmy tam, gdzie nas potrzebujesz",
     "items": [
       {
         "id": "sale-buy",
@@ -188,11 +207,74 @@
   "offers": {
     "eyebrow": "Oferty",
     "title": "Oferty",
-    "description": "Aktualne nieruchomości Homespot znajdziesz na portalu online. Przejdź do pełnej bazy ofert i wybierz to, co pasuje do Twoich planów.",
+    "description": "Wybierz rodzaj nieruchomości. Każdy kafelek otwiera aktualne ogłoszenia Homespot.",
     "ctaLabel": "Zobacz oferty",
     "ctaHref": "https://homespot-nieruchomosci.nieruchomosci-online.pl",
     "pageHeroImage": "/media/apartment-view.jpg",
-    "pageHeroAlt": "Przestronny salon z widokiem"
+    "pageHeroAlt": "Przestronny salon z widokiem",
+    "items": [
+      {
+        "id": "apartments-sale",
+        "title": "Mieszkania na sprzedaż",
+        "href": "https://homespot-nieruchomosci.nieruchomosci-online.pl/szukaj.html?3,mieszkanie,sprzedaz&q=",
+        "imageSrc": "/media/interior-living.jpg",
+        "imageAlt": "Salon w mieszkaniu"
+      },
+      {
+        "id": "houses-sale",
+        "title": "Domy na sprzedaż",
+        "href": "https://homespot-nieruchomosci.nieruchomosci-online.pl/szukaj.html?3,dom,sprzedaz&q=",
+        "imageSrc": "/media/villa-modern.jpg",
+        "imageAlt": "Nowoczesny dom"
+      },
+      {
+        "id": "plots-sale",
+        "title": "Działki na sprzedaż",
+        "href": "https://homespot-nieruchomosci.nieruchomosci-online.pl/szukaj.html?3,dzialka,sprzedaz&q=",
+        "imageSrc": "/media/home-exterior.jpg",
+        "imageAlt": "Działka i zabudowa mieszkaniowa"
+      },
+      {
+        "id": "rentals",
+        "title": "Nieruchomości na wynajem",
+        "href": "https://homespot-nieruchomosci.nieruchomosci-online.pl/szukaj.html?3,,wynajem&q=",
+        "imageSrc": "/media/apartment-view.jpg",
+        "imageAlt": "Wnętrze nieruchomości na wynajem"
+      }
+    ]
+  },
+  "reviews": {
+    "eyebrow": "Opinie",
+    "title": "Opinie",
+    "lead": "Kilka słów od osób, które szukały z nami miejsca.",
+    "pageHeroImage": "/media/interior-dining.jpg",
+    "pageHeroAlt": "Jadalnia w eleganckim wnętrzu",
+    "items": [
+      {
+        "id": "review-marta",
+        "author": "Marta W.",
+        "quote": "Szukaliśmy mieszkania w Poznaniu bez pośpiechu i bez presji. Homespot tłumaczył każdy krok tak, że decyzja była nasza, a formalności przestały straszyć.",
+        "rating": 5
+      },
+      {
+        "id": "review-tomasz",
+        "author": "Tomasz L.",
+        "quote": "Przy domu pod miastem liczyła się konkretna rozmowa, nie folder ze zdjęciami. Dostaliśmy uczciwy obraz miejsca i wsparcie aż do kluczy.",
+        "rating": 5
+      },
+      {
+        "id": "review-agnieszka",
+        "author": "Agnieszka R.",
+        "quote": "Wynajem ogarnęli sprawnie i po ludzku. Warunki były jasne, a ja nie musiałam sama gonić dokumentów.",
+        "rating": 5
+      },
+      {
+        "id": "review-jakub",
+        "author": "Jakub D.",
+        "quote": "Sprzedaż mieszkania zwykle jest nerwowa. Tutaj ktoś naprawdę stał po naszej stronie i doprowadził sprawę do końca.",
+        "rating": 5
+      }
+    ]
   },
   "team": {
     "eyebrow": "Zespół",
@@ -260,6 +342,7 @@
     { "id": "about", "label": "O nas", "href": "/o-nas" },
     { "id": "services", "label": "Usługi", "href": "/uslugi" },
     { "id": "offers", "label": "Oferty", "href": "/oferty" },
+    { "id": "reviews", "label": "Opinie", "href": "/opinie" },
     { "id": "team", "label": "Zespół", "href": "/zespol" },
     { "id": "contact", "label": "Kontakt", "href": "/kontakt" }
   ]
