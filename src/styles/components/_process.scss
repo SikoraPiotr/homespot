@@ -4,6 +4,9 @@
 $process-surface: #0c3158;
 $process-line: $color-cyan;
 $process-dot: 2.15rem;
+$process-bend-width: 2.75rem;
+$process-bend-right: 0.55rem;
+$process-line-size: 4px;
 
 .process__eyebrow {
   margin: 0 0 $space-3;
@@ -179,8 +182,8 @@ $process-dot: 2.15rem;
 .process__rail {
   @include respond-up($bp-lg) {
     align-self: end;
-    height: 4px;
-    margin-bottom: -2px;
+    height: $process-line-size;
+    margin-bottom: calc($process-line-size / -2);
     background: $process-line;
   }
 }
@@ -190,7 +193,7 @@ $process-dot: 2.15rem;
     grid-column: 1 / -1;
     grid-row: 1;
     margin-left: $process-dot;
-    margin-right: 0.35rem;
+    margin-right: calc($process-bend-right + $process-bend-width - 2px);
   }
 }
 
@@ -199,7 +202,7 @@ $process-dot: 2.15rem;
     grid-column: 1 / -1;
     grid-row: 2;
     margin-left: 2.6rem;
-    margin-right: 2.6rem;
+    margin-right: calc($process-bend-right + $process-bend-width - 2px);
   }
 }
 
@@ -215,10 +218,10 @@ $process-dot: 2.15rem;
 .process__bend {
   @include respond-up($bp-lg) {
     align-self: stretch;
-    width: 2.35rem;
-    margin-top: -3.4rem;
-    margin-bottom: -2px;
-    border: 4px solid transparent;
+    width: $process-bend-width;
+    margin-top: calc(-3.4rem - $process-line-size / 2);
+    margin-bottom: calc($process-line-size / -2);
+    border: $process-line-size solid transparent;
   }
 }
 
@@ -227,12 +230,12 @@ $process-dot: 2.15rem;
     grid-column: 3;
     grid-row: 2;
     justify-self: end;
-    margin-right: 0.35rem;
+    margin-right: $process-bend-right;
     border-top-color: $process-line;
     border-right-color: $process-line;
     border-bottom-color: $process-line;
-    border-top-right-radius: 1.45rem;
-    border-bottom-right-radius: 1.45rem;
+    border-top-right-radius: 1.55rem;
+    border-bottom-right-radius: 1.55rem;
   }
 }
 
