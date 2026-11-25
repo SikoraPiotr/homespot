@@ -20,6 +20,7 @@ export default async function AboutPage() {
         eyebrow={content.about.eyebrow}
         title={content.about.title}
         lead={content.about.lead}
+        leadScript
         imageSrc={content.about.pageHeroImage}
         imageAlt={content.about.pageHeroAlt}
       />

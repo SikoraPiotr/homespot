@@ -17,6 +17,7 @@ export type TeamMember = {
   id: string;
   name: string;
   role: string;
+  license?: string;
   email: string;
   phone: string;
   imageSrc: string;

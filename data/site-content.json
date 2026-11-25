@@ -214,21 +214,21 @@
     "description": "Wybierz poniżej poszukiwany rodzaj nieruchomości",
     "ctaLabel": "Zobacz oferty",
     "ctaHref": "https://homespot-nieruchomosci.nieruchomosci-online.pl",
-    "pageHeroImage": "/media/offers-apartments.jpg",
+    "pageHeroImage": "/media/offers-apartments-v2.jpg",
     "pageHeroAlt": "Salon w mieszkaniu na sprzedaż",
     "items": [
       {
         "id": "apartments-sale",
         "title": "Mieszkania na sprzedaż",
         "href": "https://homespot-nieruchomosci.nieruchomosci-online.pl/szukaj.html?3,mieszkanie,sprzedaz&q=",
-        "imageSrc": "/media/offers-apartments.jpg",
+        "imageSrc": "/media/offers-apartments-v2.jpg",
         "imageAlt": "Mieszkanie na sprzedaż"
       },
       {
         "id": "houses-sale",
         "title": "Domy na sprzedaż",
         "href": "https://homespot-nieruchomosci.nieruchomosci-online.pl/szukaj.html?3,dom,sprzedaz&q=",
-        "imageSrc": "/media/offers-houses.jpg",
+        "imageSrc": "/media/offers-houses-v2.jpg",
         "imageAlt": "Dom na sprzedaż"
       },
       {
@@ -242,7 +242,7 @@
         "id": "rentals",
         "title": "Nieruchomości na wynajem",
         "href": "https://homespot-nieruchomosci.nieruchomosci-online.pl/szukaj.html?3,,wynajem&q=",
-        "imageSrc": "/media/offers-rent.jpg",
+        "imageSrc": "/media/offers-rent-v2.jpg",
         "imageAlt": "Nieruchomość na wynajem"
       }
     ]
@@ -294,27 +294,28 @@
         "id": "member-mateusz",
         "name": "Mateusz Fąfara",
         "role": "Pośrednik, współwłaściciel",
-        "email": "biuro@homespot.com.pl",
+        "license": "nr licencji PFRN 31325",
+        "email": "m.fafara@homespot.com.pl",
         "phone": "+48 791 112 783",
-        "imageSrc": "/media/team-mateusz.jpg",
+        "imageSrc": "/media/team-mateusz-v2.jpg",
         "imageAlt": "Portret Mateusza Fąfary"
       },
       {
         "id": "member-mikolaj",
         "name": "Mikołaj Mikita",
         "role": "Pośrednik, współwłaściciel",
-        "email": "biuro@homespot.com.pl",
+        "email": "m.mikita@homespot.com.pl",
         "phone": "+48 792 999 041",
-        "imageSrc": "/media/team-mikolaj.jpg",
+        "imageSrc": "/media/team-mikolaj-v2.jpg",
         "imageAlt": "Portret Mikołaja Mikity"
       },
       {
         "id": "member-oskar",
         "name": "Oskar Stefański",
         "role": "Pośrednik, współwłaściciel",
-        "email": "biuro@homespot.com.pl",
+        "email": "o.stefanski@homespot.com.pl",
         "phone": "+48 798 729 923",
-        "imageSrc": "/media/team-oskar.jpg",
+        "imageSrc": "/media/team-oskar-v2.jpg",
         "imageAlt": "Portret Oskara Stefańskiego"
       }
     ]

@@ -3,10 +3,6 @@
 
 $process-surface: #0c3158;
 $process-line: $color-cyan;
-$process-dot: 2.15rem;
-$process-bend-width: 2.75rem;
-$process-bend-right: 0.55rem;
-$process-line-size: 4px;
 
 .process__eyebrow {
   margin: 0 0 $space-3;
@@ -30,6 +26,14 @@ $process-line-size: 4px;
   }
 }
 
+.process .process__layout {
+  @include respond-up($bp-lg) {
+    width: 80%;
+    max-width: none;
+    padding-inline: 0;
+  }
+}
+
 .process__board {
   position: relative;
   overflow: hidden;
@@ -44,8 +48,8 @@ $process-line-size: 4px;
   @include respond-up($bp-lg) {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    row-gap: 3.4rem;
-    padding: 2.75rem 1.75rem 2.25rem;
+    row-gap: 4.5rem;
+    padding: 2.75rem 8.5rem 2.5rem;
   }
 }
 
@@ -173,89 +177,25 @@ $process-line-size: 4px;
   }
 }
 
-.process__rail,
-.process__bend {
+.process__track {
   display: none;
 
   @include respond-up($bp-lg) {
     display: block;
-    position: relative;
+    position: absolute;
+    inset: 0;
     z-index: 0;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
     pointer-events: none;
-  }
-}
 
-.process__rail {
-  @include respond-up($bp-lg) {
-    align-self: end;
-    height: $process-line-size;
-    margin-bottom: calc($process-line-size / -2);
-    background: $process-line;
-  }
-}
-
-.process__rail--1 {
-  @include respond-up($bp-lg) {
-    grid-column: 1 / -1;
-    grid-row: 1;
-    margin-left: $process-dot;
-    margin-right: calc($process-bend-right + $process-bend-width - 2px);
-  }
-}
-
-.process__rail--2 {
-  @include respond-up($bp-lg) {
-    grid-column: 1 / -1;
-    grid-row: 2;
-    margin-left: calc(33.333% + 0.35rem);
-    margin-right: calc($process-bend-right + $process-bend-width - 2px);
-  }
-}
-
-.process__rail--3 {
-  @include respond-up($bp-lg) {
-    grid-column: 1 / -1;
-    grid-row: 3;
-    margin-left: 2.6rem;
-    margin-right: calc(33.333% - 3.5rem);
-  }
-}
-
-.process__bend {
-  @include respond-up($bp-lg) {
-    align-self: stretch;
-    width: $process-bend-width;
-    margin-top: calc(-3.4rem - $process-line-size / 2);
-    margin-bottom: calc($process-line-size / -2);
-    border: $process-line-size solid transparent;
-  }
-}
-
-.process__bend--right {
-  @include respond-up($bp-lg) {
-    grid-column: 3;
-    grid-row: 2;
-    justify-self: end;
-    margin-right: $process-bend-right;
-    border-top-color: $process-line;
-    border-right-color: $process-line;
-    border-bottom-color: $process-line;
-    border-top-right-radius: 1.55rem;
-    border-bottom-right-radius: 1.55rem;
-  }
-}
-
-.process__bend--left {
-  @include respond-up($bp-lg) {
-    grid-column: 2;
-    grid-row: 3;
-    justify-self: start;
-    width: calc(33.333% + #{$process-bend-width});
-    margin-left: calc(-33.333% + 0.2rem);
-    border-top-color: $process-line;
-    border-left-color: $process-line;
-    border-bottom-color: $process-line;
-    border-top-left-radius: 1.45rem;
-    border-bottom-left-radius: 1.45rem;
+    path {
+      fill: none;
+      stroke: $process-line;
+      stroke-width: 4;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
   }
 }

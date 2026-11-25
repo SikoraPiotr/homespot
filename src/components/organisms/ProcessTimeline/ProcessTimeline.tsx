@@ -2,6 +2,7 @@ import { Reveal } from "@/components/molecules/Reveal/Reveal";
 import { cn } from "@/lib/cn";
 import type { ProcessContent } from "@/types/content";
 import { ProcessGlyph } from "./ProcessGlyph";
+import { ProcessTrack } from "./ProcessTrack";
 
 type ProcessTimelineProps = {
   content: ProcessContent;
@@ -9,8 +10,8 @@ type ProcessTimelineProps = {
 
 export function ProcessTimeline({ content }: ProcessTimelineProps) {
   return (
-    <section className="section section--deep" aria-labelledby="process-title">
-      <div className="section__inner">
+    <section className="section section--deep process" aria-labelledby="process-title">
+      <div className="section__inner process__layout">
         <Reveal>
           <p className="process__eyebrow">{content.eyebrow}</p>
           <h2 className="process__title" id="process-title">
@@ -37,11 +38,7 @@ export function ProcessTimeline({ content }: ProcessTimelineProps) {
               );
             })}
           </ol>
-          <span className="process__rail process__rail--1" aria-hidden="true" />
-          <span className="process__rail process__rail--2" aria-hidden="true" />
-          <span className="process__rail process__rail--3" aria-hidden="true" />
-          <span className="process__bend process__bend--right" aria-hidden="true" />
-          <span className="process__bend process__bend--left" aria-hidden="true" />
+          <ProcessTrack />
         </div>
       </div>
     </section>

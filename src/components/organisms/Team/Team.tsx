@@ -43,18 +43,20 @@ export function Team({ content, showHeader = false }: TeamProps) {
                         alt={member.imageAlt}
                         fill
                         sizes="(max-width: 64rem) 100vw, 33vw"
-                        style={{ objectFit: "cover", objectPosition: "center 12%" }}
+                        style={{ objectFit: "cover", objectPosition: "center 22%" }}
                       />
                     </div>
                     <div className="flip-card__overlay">
                       <h3 className="flip-card__title">{member.name}</h3>
                       <p className="flip-card__subtitle">{member.role}</p>
+                      {member.license ? <p className="flip-card__license">{member.license}</p> : null}
                     </div>
                   </>
                 }
                 back={
                   <div className="flip-card__meta">
                     <h3 className="flip-card__title">{member.name}</h3>
+                    {member.license ? <p className="flip-card__license">{member.license}</p> : null}
                     <a href={`mailto:${member.email}`}>{member.email}</a>
                     <a href={`tel:${member.phone.replace(/\s+/g, "")}`}>{member.phone}</a>
                   </div>

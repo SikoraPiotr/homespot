@@ -173,7 +173,14 @@
 
 .flip-card--team .flip-card__media img {
   object-fit: cover;
-  object-position: center 12%;
+  object-position: center 22%;
+}
+
+.flip-card__license {
+  margin: 0.35rem 0 0;
+  color: $color-cyan;
+  font-size: 0.82rem;
+  letter-spacing: 0.02em;
 }
 
 .flip-card__media {

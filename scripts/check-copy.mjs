@@ -1,7 +1,8 @@
 import { readFileSync, readdirSync, statSync } from "node:fs";
 import { join, extname } from "node:path";
+import { fileURLToPath } from "node:url";
 
-const ROOT = new URL("..", import.meta.url).pathname;
+const ROOT = fileURLToPath(new URL("..", import.meta.url));
 const BANNED = /[\u2013\u2014]/;
 const SCAN_DIRS = ["data", join("src", "app"), join("src", "components")];
 const EXTENSIONS = new Set([".json", ".tsx", ".ts"]);

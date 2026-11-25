@@ -1169,6 +1169,12 @@ export function AdminEditor({ initialContent }: AdminEditorProps) {
                       value={member.phone}
                       onChange={(value) => updateMember(member.id, { phone: value })}
                     />
+                    <AdminField
+                      id={`member-license-${member.id}`}
+                      label="Licencja"
+                      value={member.license ?? ""}
+                      onChange={(value) => updateMember(member.id, { license: value })}
+                    />
                     <AdminImageField
                       label="Zdjęcie"
                       src={member.imageSrc}
@@ -1207,6 +1213,7 @@ export function AdminEditor({ initialContent }: AdminEditorProps) {
                           id: newId("member"),
                           name: "Nowa osoba",
                           role: "Pośrednik",
+                          license: "",
                           email: content.contact.email,
                           phone: "+48 000 000 000",
                           imageSrc: "/media/team-placeholder.svg",
@@ -1217,8 +1224,9 @@ export function AdminEditor({ initialContent }: AdminEditorProps) {
                   }))
                 }
               >
-                Dodaj osobę
+                Dodaj agenta
               </Button>
+              <p className="admin__hint">Nowa osoba pojawi się pod obecną trójką.</p>
             </>
           ) : null}
 

@@ -27,6 +27,7 @@ export const teamMemberSchema = z.object({
   id: nonEmpty(80),
   name: nonEmpty(120),
   role: nonEmpty(120),
+  license: optionalText(80).optional(),
   email: nonEmpty(160),
   phone: nonEmpty(40),
   imageSrc: mediaPathSchema,
