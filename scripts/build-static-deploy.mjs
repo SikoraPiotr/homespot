@@ -22,6 +22,7 @@ function run(command, args, env = {}) {
     cwd: root,
     stdio: "inherit",
     env: { ...process.env, ...env },
+    shell: process.platform === "win32",
   });
   if (result.status !== 0) {
     const error = new Error(`${command} ${args.join(" ")} failed with status ${result.status ?? 1}`);
