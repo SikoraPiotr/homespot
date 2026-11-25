@@ -19,8 +19,9 @@ export default async function ServicesPage() {
       <PageHero
         eyebrow={content.services.eyebrow}
         title={content.services.title}
-        imageSrc="/media/keys-handover.jpg"
-        imageAlt="Przekazanie kluczy do mieszkania"
+        script={content.services.script}
+        imageSrc="/media/home-tile-services.jpg"
+        imageAlt="Usługi Homespot"
       />
       <Services content={content.services} />
     </>

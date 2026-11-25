@@ -55,7 +55,10 @@ export function AboutStory({ content }: AboutStoryProps) {
       <section className="section section--deep about-story__closing" aria-label="Podsumowanie">
         <div className="section__inner">
           <Reveal>
-            <p className="about-story__closing-text">{content.closing}</p>
+            <div className="about-story__closing-card">
+              <p className="about-story__closing-title">{content.closingTitle}</p>
+              <p className="about-story__closing-text">{content.closing}</p>
+            </div>
           </Reveal>
         </div>
       </section>

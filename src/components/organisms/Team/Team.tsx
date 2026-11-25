@@ -58,6 +58,10 @@ export function Team({ content, showHeader = false }: TeamProps) {
             </Reveal>
           ))}
         </div>
+        <p className="team__join">
+          {content.joinPrompt}{" "}
+          <a href={`mailto:${content.joinEmail}`}>{content.joinLabel}</a>
+        </p>
       </div>
     </section>
   );

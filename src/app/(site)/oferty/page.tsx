@@ -19,7 +19,7 @@ export default async function OffersPage() {
       <PageHero
         eyebrow={content.offers.eyebrow}
         title={content.offers.title}
-        lead={content.offers.description}
+        script={content.offers.script}
         imageSrc={content.offers.pageHeroImage}
         imageAlt={content.offers.pageHeroAlt}
       />

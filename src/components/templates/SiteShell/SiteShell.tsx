@@ -6,21 +6,24 @@ import type { ReactNode } from "react";
 
 type SiteShellProps = {
   navigation: SiteContent["navigation"];
+  social: SiteContent["social"];
+  addressLines: string[];
+  mapsUrl: string;
   children: ReactNode;
 };
 
-export function SiteShell({ navigation, children }: SiteShellProps) {
+export function SiteShell({ navigation, social, addressLines, mapsUrl, children }: SiteShellProps) {
   return (
     <div className="page">
       <a className="skip-link" href="#main">
         Przejdź do treści
       </a>
       <AmbientField />
-      <SiteHeader navigation={navigation} />
+      <SiteHeader navigation={navigation} social={social} />
       <main className="page__main" id="main">
         {children}
       </main>
-      <SiteFooter />
+      <SiteFooter addressLines={addressLines} mapsUrl={mapsUrl} />
     </div>
   );
 }

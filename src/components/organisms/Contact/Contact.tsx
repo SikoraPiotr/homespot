@@ -22,17 +22,26 @@ export function Contact({ content, showHeader = false }: ContactProps) {
               />
             ) : (
               <h2 className="contact__aside-title" id="contact-details-heading">
-                Biuro Homespot
+                {content.placeName}
               </h2>
             )}
             <address className="contact__address">
-              {content.addressLines.map((line) => (
-                <span key={line}>
-                  {line}
-                  <br />
-                </span>
-              ))}
+              <a href={content.mapsUrl}>
+                {content.addressLines.map((line) => (
+                  <span key={line}>
+                    {line}
+                    <br />
+                  </span>
+                ))}
+              </a>
             </address>
+            <iframe
+              className="contact__map"
+              title="Mapa: Homespot Nieruchomości, Grochowska 63, Poznań"
+              src="https://maps.google.com/maps?q=Grochowska%2063%2C%2060-339%20Pozna%C5%84&z=16&output=embed"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
             <a className="contact__email" href={`mailto:${content.email}`}>
               {content.email}
             </a>

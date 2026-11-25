@@ -42,7 +42,7 @@
   margin: 0 0 $space-4;
   color: $color-cyan;
   font-family: $font-display;
-  font-size: 0.75rem;
+  font-size: 0.92rem;
   font-weight: 600;
   letter-spacing: 0.22em;
   text-transform: uppercase;
@@ -51,6 +51,16 @@
 .page-hero__title {
   font-size: clamp(2rem, 5vw, 3.25rem);
   text-wrap: balance;
+}
+
+.page-hero__script {
+  margin: $space-4 0 0;
+  max-width: 36rem;
+  color: $color-white;
+  font-family: var(--font-script), cursive;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 500;
+  line-height: 1.15;
 }
 
 .page-hero__lead {

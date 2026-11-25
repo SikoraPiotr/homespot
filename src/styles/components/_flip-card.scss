@@ -160,3 +160,28 @@
   text-decoration: underline;
   text-underline-offset: 0.2em;
 }
+
+.flip-card--plain.flip-card--service .flip-card__face--front {
+  justify-content: center;
+  align-items: center;
+  padding: $space-5;
+  background: $color-white;
+  text-align: center;
+}
+
+.flip-card--plain .flip-card__copy {
+  position: relative;
+  z-index: 1;
+}
+
+.flip-card--plain .flip-card__title {
+  color: $color-cyan-deep;
+}
+
+.flip-card--plain .flip-card__subtitle {
+  color: $color-oxford;
+}
+
+.flip-card--plain .flip-card__hint {
+  color: rgba($color-oxford, 0.62);
+}

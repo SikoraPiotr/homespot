@@ -4,11 +4,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import { SocialLinks } from "@/components/molecules/SocialLinks/SocialLinks";
 import { cn } from "@/lib/cn";
 import type { SiteContent } from "@/types/content";
 
 type SiteHeaderProps = {
   navigation: SiteContent["navigation"];
+  social: SiteContent["social"];
 };
 
 function DesktopNavLink({ href, label }: { href: string; label: string }) {
@@ -50,7 +52,7 @@ function MobileNavLink({
   );
 }
 
-export function SiteHeader({ navigation }: SiteHeaderProps) {
+export function SiteHeader({ navigation, social }: SiteHeaderProps) {
   const [solid, setSolid] = useState(false);
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
@@ -74,7 +76,18 @@ export function SiteHeader({ navigation }: SiteHeaderProps) {
     setOpen(false);
   }, [pathname]);
 
-  const showSolid = solid || !isHome;
+  useEffect(() => {
+    if (!open) return;
+
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setOpen(false);
+    };
+
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [open]);
+
+  const showSolid = solid || !isHome || open;
 
   return (
     <>
@@ -98,6 +111,7 @@ export function SiteHeader({ navigation }: SiteHeaderProps) {
           </nav>
 
           <div className="site-header__actions">
+            <SocialLinks items={social} className="site-header__social" />
             <Link className="icon-link" href="/kontakt" aria-label="Przejdź do kontaktu">
               <span className="icon-link__glyph" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none">
@@ -117,7 +131,11 @@ export function SiteHeader({ navigation }: SiteHeaderProps) {
               onClick={() => setOpen((value) => !value)}
             >
               <span className="sr-only">{open ? "Zamknij menu" : "Otwórz menu"}</span>
-              <span aria-hidden="true">{open ? "✕" : "＋"}</span>
+              <span className="site-header__burger" aria-hidden="true">
+                <span />
+                <span />
+                <span />
+              </span>
             </button>
           </div>
         </div>
@@ -138,6 +156,7 @@ export function SiteHeader({ navigation }: SiteHeaderProps) {
             />
           ))}
         </nav>
+        <SocialLinks items={social} className="site-header__social site-header__social--drawer" />
       </div>
     </>
   );

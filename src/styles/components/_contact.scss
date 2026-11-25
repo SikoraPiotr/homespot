@@ -28,6 +28,23 @@
   color: $color-fog;
   font-style: normal;
   line-height: 1.7;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  a:hover,
+  a:focus-visible {
+    color: $color-cyan;
+  }
+}
+
+.contact__map {
+  width: min(100%, 28rem);
+  height: 16rem;
+  border: 0;
+  border-radius: $radius-m;
 }
 
 .contact__email {

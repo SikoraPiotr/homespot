@@ -1,16 +1,40 @@
-import { BrandLockup } from "@/components/atoms/BrandLockup/BrandLockup";
+import Image from "next/image";
 
-export function SiteFooter() {
+type SiteFooterProps = {
+  addressLines: string[];
+  mapsUrl: string;
+};
+
+export function SiteFooter({ addressLines, mapsUrl }: SiteFooterProps) {
   const year = new Date().getFullYear();
 
   return (
     <footer className="site-footer">
       <div className="site-footer__inner">
         <div className="site-footer__brand-block">
-          <BrandLockup variant="footer" />
+          <span className="site-footer__lockup">
+            <Image
+              className="site-footer__mark"
+              src="/brand/logo-mark-cyan.svg"
+              alt=""
+              width={64}
+              height={64}
+            />
+            <Image
+              className="site-footer__wordmark"
+              src="/brand/logotyp-white-flat.svg"
+              alt="Homespot Nieruchomości"
+              width={768}
+              height={215}
+            />
+          </span>
           <p className="site-footer__copy">© {year} Homespot Nieruchomości</p>
         </div>
-        <p className="site-footer__copy">Grochowska 63, 60-339 Poznań</p>
+        <p className="site-footer__copy">
+          <a className="site-footer__address" href={mapsUrl}>
+            {addressLines.join(", ")}
+          </a>
+        </p>
       </div>
     </footer>
   );

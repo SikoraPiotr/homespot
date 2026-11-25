@@ -96,6 +96,7 @@ export type SiteContent = {
     eyebrow: string;
     title: string;
     lead: string;
+    closingTitle: string;
     closing: string;
     pageHeroImage: string;
     pageHeroAlt: string;
@@ -104,11 +105,13 @@ export type SiteContent = {
   services: {
     eyebrow: string;
     title: string;
+    script: string;
     items: ServiceItem[];
   };
   offers: {
     eyebrow: string;
     title: string;
+    script: string;
     description: string;
     ctaLabel: string;
     ctaHref: string;
@@ -120,6 +123,7 @@ export type SiteContent = {
     eyebrow: string;
     title: string;
     lead: string;
+    script: string;
     pageHeroImage: string;
     pageHeroAlt: string;
     items: ReviewItem[];
@@ -128,6 +132,10 @@ export type SiteContent = {
     eyebrow: string;
     title: string;
     intro: string;
+    script: string;
+    joinPrompt: string;
+    joinLabel: string;
+    joinEmail: string;
     pageHeroImage: string;
     pageHeroAlt: string;
     members: TeamMember[];
@@ -135,7 +143,9 @@ export type SiteContent = {
   contact: {
     eyebrow: string;
     title: string;
+    placeName: string;
     addressLines: string[];
+    mapsUrl: string;
     email: string;
     formSuccess: string;
     pageHeroImage: string;

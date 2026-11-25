@@ -11,6 +11,7 @@ export const reviewsContentSchema = z.object({
   eyebrow: z.string().trim().min(1).max(80),
   title: z.string().trim().min(1).max(160),
   lead: z.string().trim().min(1).max(400),
+  script: z.string().trim().min(1).max(200),
   pageHeroImage: z.string().trim().regex(/^\/[A-Za-z0-9/_.-]+$/),
   pageHeroAlt: z.string().trim().min(1).max(200),
   items: z.array(reviewItemSchema).max(40),
