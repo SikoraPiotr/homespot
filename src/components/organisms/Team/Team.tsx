@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { MediaImage } from "@/components/atoms/MediaImage/MediaImage";
 import { SectionHeader } from "@/components/atoms/SectionHeader/SectionHeader";
 import { FlipCard } from "@/components/molecules/FlipCard/FlipCard";
 import { Reveal } from "@/components/molecules/Reveal/Reveal";
@@ -11,7 +11,10 @@ type TeamProps = {
 
 export function Team({ content, showHeader = false }: TeamProps) {
   return (
-    <section className="section section--fog section--lux" aria-labelledby={showHeader ? "team-title" : undefined}>
+    <section
+      className="section section--fog section--lux"
+      aria-labelledby={showHeader ? "team-title" : undefined}
+    >
       <div className="section__inner">
         {showHeader ? (
           <Reveal>
@@ -20,6 +23,7 @@ export function Team({ content, showHeader = false }: TeamProps) {
               title={content.title}
               titleId="team-title"
               lead={content.intro}
+              leadScript
             />
           </Reveal>
         ) : null}
@@ -34,11 +38,12 @@ export function Team({ content, showHeader = false }: TeamProps) {
                 front={
                   <>
                     <div className="flip-card__media">
-                      <Image
+                      <MediaImage
                         src={member.imageSrc}
                         alt={member.imageAlt}
                         fill
                         sizes="(max-width: 64rem) 100vw, 33vw"
+                        style={{ objectFit: "cover", objectPosition: "center 12%" }}
                       />
                     </div>
                     <div className="flip-card__overlay">
@@ -58,6 +63,13 @@ export function Team({ content, showHeader = false }: TeamProps) {
             </Reveal>
           ))}
         </div>
+
+        <p className="team__join">
+          {content.joinText}{" "}
+          <a className="team__join-link" href={`mailto:${content.joinEmail}`}>
+            {content.joinLinkLabel}
+          </a>
+        </p>
       </div>
     </section>
   );

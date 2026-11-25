@@ -20,6 +20,7 @@ export default async function OffersPage() {
         eyebrow={content.offers.eyebrow}
         title={content.offers.title}
         lead={content.offers.description}
+        leadScript
         imageSrc={content.offers.pageHeroImage}
         imageAlt={content.offers.pageHeroAlt}
       />

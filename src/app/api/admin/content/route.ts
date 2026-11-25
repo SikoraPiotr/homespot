@@ -1,8 +1,7 @@
 import { NextResponse } from "next/server";
 import { isAdminAuthenticated } from "@/lib/auth";
 import { getSiteContent, saveSiteContent } from "@/lib/content";
-import { reviewsContentSchema } from "@/lib/reviews";
-import type { SiteContent } from "@/types/content";
+import { siteContentSchema } from "@/lib/site-content-schema";
 
 export async function GET() {
   if (!(await isAdminAuthenticated())) {
@@ -19,17 +18,19 @@ export async function PUT(request: Request) {
   }
 
   try {
-    const body = (await request.json()) as SiteContent;
-    const reviews = reviewsContentSchema.safeParse(body.reviews);
+    const body: unknown = await request.json();
+    const parsed = siteContentSchema.safeParse(body);
 
-    if (!reviews.success) {
+    if (!parsed.success) {
+      const firstIssue = parsed.error.issues[0];
+      const path = firstIssue?.path.join(".") || "treść";
       return NextResponse.json(
-        { error: "Sprawdź opinie: autor, treść i ocena są wymagane." },
+        { error: `Sprawdź pole „${path}”: ${firstIssue?.message ?? "wartość nieprawidłowa"}.` },
         { status: 400 },
       );
     }
 
-    await saveSiteContent({ ...body, reviews: reviews.data });
+    await saveSiteContent(parsed.data);
     return NextResponse.json({ ok: true });
   } catch {
     return NextResponse.json({ error: "Nie udało się zapisać treści." }, { status: 500 });

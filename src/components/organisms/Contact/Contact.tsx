@@ -10,7 +10,10 @@ type ContactProps = {
 
 export function Contact({ content, showHeader = false }: ContactProps) {
   return (
-    <section className="section section--lux" aria-labelledby={showHeader ? "contact-title" : "contact-details-heading"}>
+    <section
+      className="section section--lux"
+      aria-labelledby={showHeader ? "contact-title" : "contact-details-heading"}
+    >
       <div className="section__inner contact__layout">
         <Reveal>
           <div className="contact__details">
@@ -22,16 +25,23 @@ export function Contact({ content, showHeader = false }: ContactProps) {
               />
             ) : (
               <h2 className="contact__aside-title" id="contact-details-heading">
-                Biuro Homespot
+                {content.officeTitle}
               </h2>
             )}
             <address className="contact__address">
-              {content.addressLines.map((line) => (
-                <span key={line}>
-                  {line}
-                  <br />
-                </span>
-              ))}
+              <a
+                className="contact__maps-link"
+                href={content.mapsUrl}
+                target="_blank"
+                rel="noreferrer"
+              >
+                {content.addressLines.map((line) => (
+                  <span key={line}>
+                    {line}
+                    <br />
+                  </span>
+                ))}
+              </a>
             </address>
             <a className="contact__email" href={`mailto:${content.email}`}>
               {content.email}
@@ -41,6 +51,19 @@ export function Contact({ content, showHeader = false }: ContactProps) {
 
         <Reveal delay={2}>
           <ContactForm successMessage={content.formSuccess} />
+        </Reveal>
+      </div>
+
+      <div className="section__inner contact__map-wrap">
+        <Reveal>
+          <iframe
+            className="contact__map"
+            title="Mapa biura Homespot Nieruchomości"
+            src={content.mapsEmbedUrl}
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            allowFullScreen
+          />
         </Reveal>
       </div>
     </section>

@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { MediaImage } from "@/components/atoms/MediaImage/MediaImage";
 import { SectionHeader } from "@/components/atoms/SectionHeader/SectionHeader";
 import { FlipCard } from "@/components/molecules/FlipCard/FlipCard";
 import { Reveal } from "@/components/molecules/Reveal/Reveal";
@@ -15,7 +15,13 @@ export function Services({ content, showHeader = false }: ServicesProps) {
       <div className="section__inner">
         {showHeader ? (
           <Reveal>
-            <SectionHeader eyebrow={content.eyebrow} title={content.title} titleId="services-title" />
+            <SectionHeader
+              eyebrow={content.eyebrow}
+              title={content.title}
+              lead={content.lead}
+              leadScript
+              titleId="services-title"
+            />
           </Reveal>
         ) : null}
 
@@ -23,13 +29,13 @@ export function Services({ content, showHeader = false }: ServicesProps) {
           {content.items.map((item, index) => (
             <Reveal key={item.id} delay={((index % 3) + 1) as 1 | 2 | 3}>
               <FlipCard
-                className="flip-card--service"
+                className="flip-card--service flip-card--service-photo"
                 title={item.title}
                 front={
                   <>
                     {item.imageSrc ? (
                       <div className="flip-card__media">
-                        <Image
+                        <MediaImage
                           src={item.imageSrc}
                           alt=""
                           fill
@@ -37,7 +43,7 @@ export function Services({ content, showHeader = false }: ServicesProps) {
                         />
                       </div>
                     ) : null}
-                    <div className="flip-card__overlay flip-card__overlay--service">
+                    <div className="flip-card__overlay flip-card__overlay--service-center">
                       <h3 className="flip-card__title">{item.title}</h3>
                       <p className="flip-card__subtitle">{item.subtitle}</p>
                     </div>

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Manrope, Outfit } from "next/font/google";
+import { Caveat, Manrope, Outfit } from "next/font/google";
 import "@/styles/main.scss";
 
 const display = Outfit({
@@ -11,6 +11,12 @@ const display = Outfit({
 const body = Manrope({
   subsets: ["latin", "latin-ext"],
   variable: "--font-body",
+  display: "swap",
+});
+
+const script = Caveat({
+  subsets: ["latin", "latin-ext"],
+  variable: "--font-script",
   display: "swap",
 });
 
@@ -27,7 +33,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pl">
-      <body className={`${display.variable} ${body.variable}`}>{children}</body>
+      <body className={`${display.variable} ${body.variable} ${script.variable}`}>{children}</body>
     </html>
   );
 }

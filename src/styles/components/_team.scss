@@ -14,3 +14,17 @@
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
+.team__join {
+  margin: $space-7 0 0;
+  text-align: center;
+  color: $color-fog;
+  font-size: 1.08rem;
+}
+
+.team__join-link {
+  color: $color-cyan;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}

@@ -1,2 +1,3 @@
-Zdjęcia stockowe (licencje bezpłatne: Unsplash i Pexels) do użytku na stronie Homespot.
-Uzupełnij atrybucje autorów przed publikacją produkcyjną, jeśli wymaga tego licencja konkretnego pliku.
+Zdjęcia klienta (FOTY NA WWW): home-hero, home-tile-*, about-*, offers-*, reviews-hero.
+Portrety zespołu (team-mateusz/mikolaj/oskar): z profili agentów Homespot na nieruchomosci-online.pl.
+Pozostałe pliki stockowe / robocze mogą zostać w katalogu do ewentualnego użycia.

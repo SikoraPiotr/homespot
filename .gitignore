@@ -43,3 +43,9 @@ next-env.d.ts
 .env*.local
 .data/
 
+
+# static deploy artifacts
+/deploy/
+.deploy-stash/
+
+.tmp/

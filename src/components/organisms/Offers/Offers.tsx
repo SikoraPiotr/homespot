@@ -1,5 +1,5 @@
-import Image from "next/image";
 import { ButtonLink } from "@/components/atoms/Button/ButtonLink";
+import { MediaImage } from "@/components/atoms/MediaImage/MediaImage";
 import { SectionHeader } from "@/components/atoms/SectionHeader/SectionHeader";
 import { Reveal } from "@/components/molecules/Reveal/Reveal";
 import type { SiteContent } from "@/types/content";
@@ -31,7 +31,12 @@ export function Offers({ content, showHeader = false }: OffersProps) {
               <li key={item.id}>
                 <a className="offer-card" href={href} target="_blank" rel="noreferrer noopener">
                   <span className="offer-card__media">
-                    <Image src={item.imageSrc} alt="" fill sizes="(max-width: 40rem) 100vw, 25vw" />
+                    <MediaImage
+                      src={item.imageSrc}
+                      alt=""
+                      fill
+                      sizes="(max-width: 40rem) 100vw, 25vw"
+                    />
                   </span>
                   <span className="offer-card__title">{item.title}</span>
                   <span className="sr-only">{item.imageAlt}. Otwiera się w nowej karcie.</span>

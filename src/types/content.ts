@@ -96,7 +96,8 @@ export type SiteContent = {
     eyebrow: string;
     title: string;
     lead: string;
-    closing: string;
+    closingTitle: string;
+    closingText: string;
     pageHeroImage: string;
     pageHeroAlt: string;
     sections: AboutSection[];
@@ -104,6 +105,9 @@ export type SiteContent = {
   services: {
     eyebrow: string;
     title: string;
+    lead: string;
+    pageHeroImage: string;
+    pageHeroAlt: string;
     items: ServiceItem[];
   };
   offers: {
@@ -128,6 +132,9 @@ export type SiteContent = {
     eyebrow: string;
     title: string;
     intro: string;
+    joinText: string;
+    joinLinkLabel: string;
+    joinEmail: string;
     pageHeroImage: string;
     pageHeroAlt: string;
     members: TeamMember[];
@@ -135,7 +142,10 @@ export type SiteContent = {
   contact: {
     eyebrow: string;
     title: string;
+    officeTitle: string;
     addressLines: string[];
+    mapsUrl: string;
+    mapsEmbedUrl: string;
     email: string;
     formSuccess: string;
     pageHeroImage: string;

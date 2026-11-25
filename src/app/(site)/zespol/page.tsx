@@ -20,8 +20,10 @@ export default async function TeamPage() {
         eyebrow={content.team.eyebrow}
         title={content.team.title}
         lead={content.team.intro}
+        leadScript
         imageSrc={content.team.pageHeroImage}
         imageAlt={content.team.pageHeroAlt}
+        variant="team"
       />
       <Team content={content.team} />
     </>

@@ -111,6 +111,38 @@
   padding: 0;
 }
 
+.flip-card--service-photo .flip-card__face--front {
+  justify-content: center;
+  align-items: center;
+}
+
+.flip-card__overlay--service-center {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: grid;
+  gap: $space-3;
+  place-content: center;
+  place-items: center;
+  padding: $space-5;
+  text-align: center;
+  background: rgba($color-oxford, 0.48);
+  backdrop-filter: blur(2px);
+}
+
+.flip-card--service-photo .flip-card__title {
+  max-width: 16rem;
+  color: $color-white;
+  text-shadow: 0 1px 12px rgba($color-oxford, 0.45);
+}
+
+.flip-card--service-photo .flip-card__subtitle {
+  max-width: 18rem;
+  margin-top: 0;
+  color: rgba($color-white, 0.92);
+  text-shadow: 0 1px 10px rgba($color-oxford, 0.4);
+}
+
 .flip-card__overlay--service {
   position: absolute;
   inset: auto 0 0;
@@ -119,17 +151,29 @@
 }
 
 .flip-card--team {
-  min-height: 24rem;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  min-height: 0;
 }
 
 .flip-card--team .flip-card__inner {
-  min-height: 24rem;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
 }
 
 .flip-card--team .flip-card__face--front {
   justify-content: flex-end;
   overflow: hidden;
   padding: 0;
+}
+
+.flip-card--team .flip-card__media img {
+  object-fit: cover;
+  object-position: center 12%;
 }
 
 .flip-card__media {

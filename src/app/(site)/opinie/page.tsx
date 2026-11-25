@@ -20,6 +20,7 @@ export default async function ReviewsPage() {
         eyebrow={content.reviews.eyebrow}
         title={content.reviews.title}
         lead={content.reviews.lead}
+        leadScript
         imageSrc={content.reviews.pageHeroImage}
         imageAlt={content.reviews.pageHeroAlt}
       />

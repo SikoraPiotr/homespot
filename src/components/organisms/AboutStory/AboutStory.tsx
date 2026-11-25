@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { MediaImage } from "@/components/atoms/MediaImage/MediaImage";
 import { Reveal } from "@/components/molecules/Reveal/Reveal";
 import { cn } from "@/lib/cn";
 import type { SiteContent } from "@/types/content";
@@ -40,7 +40,7 @@ export function AboutStory({ content }: AboutStoryProps) {
             </Reveal>
             <Reveal delay={2}>
               <figure className="about-story__figure">
-                <Image
+                <MediaImage
                   src={section.imageSrc}
                   alt={section.imageAlt}
                   fill
@@ -55,7 +55,10 @@ export function AboutStory({ content }: AboutStoryProps) {
       <section className="section section--deep about-story__closing" aria-label="Podsumowanie">
         <div className="section__inner">
           <Reveal>
-            <p className="about-story__closing-text">{content.closing}</p>
+            <div className="about-story__closing-box">
+              <p className="about-story__closing-title">{content.closingTitle}</p>
+              <p className="about-story__closing-text">{content.closingText}</p>
+            </div>
           </Reveal>
         </div>
       </section>

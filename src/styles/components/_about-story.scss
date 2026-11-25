@@ -26,7 +26,7 @@
   margin: 0 0 $space-3;
   color: $color-cyan;
   font-family: $font-display;
-  font-size: 0.72rem;
+  font-size: 0.845rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
 }
@@ -63,7 +63,7 @@
 .about-story__highlight-label {
   color: $color-cyan;
   font-family: $font-display;
-  font-size: 0.72rem;
+  font-size: 0.845rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
 }
@@ -86,12 +86,28 @@
   }
 }
 
-.about-story__closing-text {
+.about-story__closing-box {
+  margin-inline: auto;
+  max-width: 40rem;
+  padding: $space-6 $space-5;
+  border: 1px solid rgba($color-cyan, 0.28);
+  border-radius: $radius-m;
+  background: rgba($color-surface, 0.55);
+  text-align: center;
+}
+
+.about-story__closing-title {
   margin: 0;
-  max-width: 48rem;
+  color: $color-white;
+  font-family: $font-display;
+  font-size: clamp(1.35rem, 2.6vw, 1.75rem);
+}
+
+.about-story__closing-text {
+  margin: $space-3 0 0;
   color: $color-fog;
   font-family: $font-display;
-  font-size: clamp(1.2rem, 2.5vw, 1.55rem);
+  font-size: clamp(1.05rem, 2.2vw, 1.3rem);
   line-height: 1.5;
   text-wrap: balance;
 }

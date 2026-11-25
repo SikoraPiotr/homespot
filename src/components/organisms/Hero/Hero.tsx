@@ -1,8 +1,8 @@
 "use client";
 
-import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
 import { ButtonLink } from "@/components/atoms/Button/ButtonLink";
+import { MediaImage } from "@/components/atoms/MediaImage/MediaImage";
 import { SocialLinks } from "@/components/molecules/SocialLinks/SocialLinks";
 import type { SiteContent } from "@/types/content";
 
@@ -17,7 +17,7 @@ export function Hero({ content, social }: HeroProps) {
   return (
     <section className="hero" id="start" aria-labelledby="hero-slogan">
       <div className="hero__media" aria-hidden="true">
-        <Image src={content.backgroundImage} alt="" fill priority sizes="100vw" />
+        <MediaImage src={content.backgroundImage} alt="" fill eager quality={78} sizes="100vw" />
       </div>
       <div className="hero__veil" aria-hidden="true" />
       <div className="hero__sheen" aria-hidden="true" />

@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
+import { MediaImage } from "@/components/atoms/MediaImage/MediaImage";
 import { Reveal } from "@/components/molecules/Reveal/Reveal";
 import type { SiteContent } from "@/types/content";
 
@@ -22,7 +22,12 @@ export function HomeTiles({ tiles }: HomeTilesProps) {
               <li>
                 <Link className="home-tiles__card" href={tile.href}>
                   <span className="home-tiles__media" aria-hidden="true">
-                    <Image src={tile.imageSrc} alt="" fill sizes="(max-width: 40rem) 100vw, 33vw" />
+                    <MediaImage
+                      src={tile.imageSrc}
+                      alt=""
+                      fill
+                      sizes="(max-width: 40rem) 100vw, 33vw"
+                    />
                   </span>
                   <span className="home-tiles__veil" aria-hidden="true" />
                   <span className="home-tiles__body">

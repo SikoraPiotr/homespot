@@ -3,9 +3,11 @@
 
 .admin {
   min-height: 100vh;
-  background: $color-oxford;
+  background:
+    radial-gradient(ellipse at top right, rgba($color-cyan, 0.12), transparent 42%),
+    linear-gradient(180deg, $color-oxford 0%, #001529 100%);
   color: $color-fog;
-  padding: $space-6 $space-4;
+  padding: $space-5 $space-4 $space-8;
 }
 
 .admin__shell {
@@ -13,6 +15,26 @@
   margin-inline: auto;
   display: grid;
   gap: $space-5;
+}
+
+.admin__shell--wide {
+  width: min(100%, 72rem);
+}
+
+.admin__topbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-4;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  padding: $space-4;
+  border: 1px solid rgba($color-cyan, 0.22);
+  border-radius: $radius-m;
+  background: rgba(#001833, 0.92);
+  backdrop-filter: blur(10px);
 }
 
 .admin__card {
@@ -23,21 +45,72 @@
 }
 
 .admin__title {
+  margin: 0;
   color: $color-white;
   font-size: 1.75rem;
 }
 
 .admin__lead {
-  margin-top: $space-3;
+  margin: $space-2 0 0;
   color: $color-muted;
+  max-width: 36rem;
 }
 
 .admin__toolbar {
   display: flex;
   flex-wrap: wrap;
   gap: $space-3;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
+}
+
+.admin__banner {
+  padding: $space-3 $space-4;
+  border: 1px solid rgba($color-cyan, 0.22);
+  border-radius: $radius-s;
+  background: rgba(#001833, 0.85);
+}
+
+.admin__layout {
+  display: grid;
+  gap: $space-4;
+
+  @include respond-up($bp-md) {
+    grid-template-columns: 14rem minmax(0, 1fr);
+    align-items: start;
+  }
+}
+
+.admin__nav {
+  display: grid;
+  gap: $space-2;
+  position: sticky;
+  top: 6.5rem;
+}
+
+.admin__nav-item {
+  text-align: left;
+  padding: 0.75rem 1rem;
+  border: 1px solid transparent;
+  border-radius: $radius-s;
+  background: transparent;
+  color: $color-muted-strong;
+  cursor: pointer;
+  font: inherit;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.admin__nav-item:hover,
+.admin__nav-item:focus-visible {
+  color: $color-white;
+  border-color: rgba($color-cyan, 0.28);
+  outline: none;
+}
+
+.admin__nav-item--active {
+  color: $color-white;
+  background: rgba($color-cyan, 0.14);
+  border-color: rgba($color-cyan, 0.35);
 }
 
 .admin__form {
@@ -46,11 +119,12 @@
 }
 
 .admin__status {
+  margin: 0;
   color: $color-cyan;
 }
 
 .admin__subtitle {
-  margin: 0;
+  margin: $space-2 0 0;
   color: $color-white;
   font-size: 1.25rem;
 }
@@ -58,6 +132,87 @@
 .admin__hint {
   margin: 0;
   color: $color-muted;
+  font-size: 0.9rem;
+}
+
+.admin__list-block,
+.admin__list {
+  display: grid;
+  gap: $space-4;
+}
+
+.admin__list-title {
+  margin: 0;
+  color: $color-white;
+  font-size: 1rem;
+}
+
+.admin__list-item {
+  display: grid;
+  gap: $space-3;
+  padding: $space-4;
+  border: 1px solid rgba($color-cyan, 0.18);
+  border-radius: $radius-s;
+  background: rgba($color-surface, 0.28);
+}
+
+.admin__image {
+  display: grid;
+  gap: $space-3;
+  padding: $space-4;
+  border: 1px dashed rgba($color-cyan, 0.28);
+  border-radius: $radius-s;
+}
+
+.admin__image-head {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-3;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.admin__image-actions {
+  display: flex;
+  gap: $space-2;
+  align-items: center;
+}
+
+.admin__file-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.admin__image-preview {
+  display: grid;
+  gap: $space-2;
+}
+
+.admin__image-thumb {
+  width: min(100%, 22rem);
+  max-height: 12rem;
+  object-fit: cover;
+  border-radius: $radius-s;
+  border: 1px solid rgba($color-cyan, 0.22);
+  background: $color-ink;
+}
+
+.admin__image-empty {
+  display: grid;
+  place-items: center;
+  width: min(100%, 22rem);
+  min-height: 8rem;
+  border-radius: $radius-s;
+  border: 1px solid rgba($color-white, 0.16);
+  color: $color-muted;
+  background: rgba($color-ink, 0.5);
 }
 
 .admin__reviews {
