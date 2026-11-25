@@ -1,6 +1,12 @@
 # Wydania Homespot
 
-Aktualne na serwerze: `2026-11-25-kafelki-opinie` (`releases/LATEST`).
+Aktualne na serwerze: `2026-11-25-grafiki-uslug` (`releases/LATEST`).
+
+## 2026-11-25-grafiki-uslug
+
+Uwagi do kafelków mówią: bez zdjęć, napis wyśrodkowany, kolor turkusowy albo biały. Kafelek zostaje biały z turkusowym napisem. Pod napisem jest grafika, nie fotografia.
+
+Szczegóły: [RELEASE-NOTES.md](2026-11-25-grafiki-uslug/RELEASE-NOTES.md).
 
 Każde wgranie na `https://pscoders.pl/homespot/` idzie tylko przez `scripts/release.ps1`. Skrypt wymaga `releases/<wersja>/RELEASE-NOTES.md`, buduje statyczną paczkę do `releases/<wersja>/site` i wgrywa tę paczkę po FTP. Nie używa starego folderu `homespot-do-wgrania` i nie kasuje na serwerze plików, których nie ma w paczce.
 

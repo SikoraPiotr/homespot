@@ -161,48 +161,48 @@
         "title": "Sprzedaż | Zakup",
         "subtitle": "Dobre decyzje zaczynają się od właściwego partnera.",
         "description": "Prowadzimy transakcje z dbałością o każdy szczegół. Łączymy znajomość rynku, przemyślaną strategię i skuteczne negocjacje, aby pomóc Ci osiągnąć najlepszy możliwy rezultat.",
-        "imageSrc": "/media/service-sale-v2.jpg",
-        "imageAlt": "Klucze w salonie przygotowanym do sprzedaży"
+        "imageSrc": "/media/service-gfx-sale.jpg",
+        "imageAlt": "Grafika: klucz i budynek, sprzedaż i zakup"
       },
       {
         "id": "rent",
         "title": "Wynajem | Najem",
         "subtitle": "Właściwa nieruchomość. Właściwi ludzie. Dobre warunki.",
         "description": "Pomagamy znaleźć nieruchomość dopasowaną do Twoich potrzeb lub najemcę, któremu możesz zaufać. Dbamy o sprawny proces, przejrzyste warunki i bezpieczeństwo współpracy.",
-        "imageSrc": "/media/service-rent-v2.jpg",
-        "imageAlt": "Mieszkanie przygotowane na wynajem"
+        "imageSrc": "/media/service-gfx-rent.jpg",
+        "imageAlt": "Grafika: otwarte drzwi, wynajem"
       },
       {
         "id": "management",
         "title": "Zarządzanie najmem",
         "subtitle": "Twoja nieruchomość. Nasza odpowiedzialność.",
         "description": "Zarządzamy najmem kompleksowo, dbając o relacje z najemcami, bieżące sprawy i sprawną obsługę nieruchomości. Ty zachowujesz kontrolę nad swoją inwestycją, oszczędzając czas i energię.",
-        "imageSrc": "/media/service-management-v2.jpg",
-        "imageAlt": "Klucze w zarządzanej nieruchomości"
+        "imageSrc": "/media/service-gfx-management.jpg",
+        "imageAlt": "Grafika: trzy klucze, zarządzanie najmem"
       },
       {
         "id": "finance",
         "title": "Finansowanie",
         "subtitle": "Kapitał, który otwiera możliwości.",
         "description": "Pomagamy analizować dostępne rozwiązania finansowe i dopasować je do Twoich planów. Wspieramy Cię w przygotowaniu do zakupu, aby decyzje dotyczące finansowania były świadome i przemyślane.",
-        "imageSrc": "/media/service-finance-v2.jpg",
-        "imageAlt": "Model domu i notes na biurku"
+        "imageSrc": "/media/service-gfx-finance.jpg",
+        "imageAlt": "Grafika: dom na fali, finansowanie"
       },
       {
         "id": "invest",
         "title": "Inwestycje",
         "subtitle": "Dostrzegamy potencjał. Budujemy wartość.",
         "description": "Analizujemy nieruchomości pod kątem rentowności, ryzyka i możliwości wzrostu wartości. Pomagamy przekładać cele inwestycyjne na konkretne strategie, oparte na danych, doświadczeniu i znajomości rynku.",
-        "imageSrc": "/media/service-invest-v2.jpg",
-        "imageAlt": "Nowoczesny budynek mieszkalny"
+        "imageSrc": "/media/service-gfx-invest.jpg",
+        "imageAlt": "Grafika: budynek mieszkalny, inwestycje"
       },
       {
         "id": "analysis",
         "title": "Analiza rynku",
         "subtitle": "Wiedza, która daje przewagę.",
         "description": "Łączymy analizę cen, trendów i lokalnych uwarunkowań, aby lepiej ocenić wartość nieruchomości oraz jej potencjał. Dostarczamy argumentów, które pomagają podejmować decyzje oparte na faktach, a nie przypuszczeniach.",
-        "imageSrc": "/media/service-analysis-v2.jpg",
-        "imageAlt": "Widok na miasto z okna biura"
+        "imageSrc": "/media/service-gfx-analysis.jpg",
+        "imageAlt": "Grafika: linia miasta, analiza rynku"
       }
     ]
   },
