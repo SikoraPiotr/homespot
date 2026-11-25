@@ -1,6 +1,12 @@
 # Wydania Homespot
 
-Aktualne na serwerze: `2026-11-25-grafiki-uslug` (`releases/LATEST`).
+Aktualne na serwerze: `2026-11-25-stan` (`releases/LATEST`).
+
+## 2026-11-25-stan
+
+Pełny zapis obecnej strony: uwagi nr 2, twarze zespołu, panel do podmiany zdjęć, białe kafelki usług z grafiką i slider opinii.
+
+Szczegóły: [RELEASE-NOTES.md](2026-11-25-stan/RELEASE-NOTES.md).
 
 ## 2026-11-25-grafiki-uslug
 
@@ -13,8 +19,6 @@ Każde wgranie na `https://pscoders.pl/homespot/` idzie tylko przez `scripts/rel
 Panel admina podmienia zdjęcia i teksty w plikach projektu. Na hostingu ze statycznym HTML widać je po kolejnym wydaniu.
 
 ## 2026-11-25-kafelki-opinie
-
-To jest wersja na serwerze.
 
 - Kafelki usług są białe, z wyśrodkowanym turkusowym napisem i zdjęciem pod tekstem. Nie odwracają się.
 - Zdjęcia usług są dopasowane do tematu: sprzedaż, wynajem, zarządzanie najmem, finansowanie, inwestycje, analiza rynku.
