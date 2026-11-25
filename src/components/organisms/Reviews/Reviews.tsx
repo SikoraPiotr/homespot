@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import type { ReviewItem, SiteContent } from "@/types/content";
 
 type ReviewsProps = {
@@ -29,24 +29,48 @@ function ReviewCard({ review }: { review: ReviewItem }) {
 }
 
 export function Reviews({ content }: ReviewsProps) {
-  const [pageSize, setPageSize] = useState(1);
-  const [page, setPage] = useState(0);
+  const trackRef = useRef<HTMLDivElement>(null);
+  const [edges, setEdges] = useState({ prev: false, next: false });
   const total = content.items.length;
-  const pageCount = Math.max(1, Math.ceil(total / pageSize));
-  const safePage = Math.min(page, pageCount - 1);
-  const visible = content.items.slice(safePage * pageSize, safePage * pageSize + pageSize);
 
-  useEffect(() => {
-    const query = window.matchMedia("(min-width: 64rem)");
-    const apply = () => setPageSize(query.matches ? 4 : 1);
-    apply();
-    query.addEventListener("change", apply);
-    return () => query.removeEventListener("change", apply);
+  const measure = useCallback(() => {
+    const track = trackRef.current;
+
+    if (!track) return;
+
+    setEdges({
+      prev: track.scrollLeft > 4,
+      next: track.scrollLeft + track.clientWidth < track.scrollWidth - 4,
+    });
   }, []);
 
   useEffect(() => {
-    setPage(0);
-  }, [pageSize]);
+    measure();
+    const track = trackRef.current;
+
+    if (!track) return;
+
+    track.addEventListener("scroll", measure, { passive: true });
+    window.addEventListener("resize", measure);
+
+    return () => {
+      track.removeEventListener("scroll", measure);
+      window.removeEventListener("resize", measure);
+    };
+  }, [measure, total]);
+
+  function turn(direction: -1 | 1) {
+    const track = trackRef.current;
+    const card = track?.querySelector<HTMLElement>(".review-card");
+
+    if (!track || !card) return;
+
+    const gap = Number.parseFloat(getComputedStyle(track).columnGap || "0") || 0;
+    const step = card.getBoundingClientRect().width + gap;
+    const visible = Math.max(1, Math.round((track.clientWidth + gap) / step));
+
+    track.scrollBy({ left: direction * step * visible, behavior: "smooth" });
+  }
 
   if (total === 0) {
     return (
@@ -58,39 +82,48 @@ export function Reviews({ content }: ReviewsProps) {
     );
   }
 
+  const showArrows = edges.prev || edges.next;
+
   return (
     <section className="section section--fog" aria-label="Lista opinii">
-      <div className="section__inner reviews__panel">
-        <div className="reviews__grid">
-          {visible.map((review) => (
-            <ReviewCard key={review.id} review={review} />
-          ))}
-        </div>
-        {pageCount > 1 ? (
-          <div className="reviews__nav">
+      <div className="section__inner">
+        <div className="reviews__slider">
+          {showArrows ? (
             <button
-              className="reviews__arrow"
+              className="reviews__arrow reviews__arrow--prev"
               type="button"
-              onClick={() => setPage((current) => Math.max(0, current - 1))}
-              disabled={safePage === 0}
+              onClick={() => turn(-1)}
+              disabled={!edges.prev}
             >
               <span aria-hidden="true">‹</span>
               <span className="sr-only">Poprzednie opinie</span>
             </button>
-            <p className="reviews__page">
-              {safePage + 1} / {pageCount}
-            </p>
+          ) : null}
+          <div
+            className="reviews__track"
+            ref={trackRef}
+            tabIndex={0}
+            onKeyDown={(event) => {
+              if (event.key === "ArrowLeft") turn(-1);
+              if (event.key === "ArrowRight") turn(1);
+            }}
+          >
+            {content.items.map((review) => (
+              <ReviewCard key={review.id} review={review} />
+            ))}
+          </div>
+          {showArrows ? (
             <button
-              className="reviews__arrow"
+              className="reviews__arrow reviews__arrow--next"
               type="button"
-              onClick={() => setPage((current) => Math.min(pageCount - 1, current + 1))}
-              disabled={safePage === pageCount - 1}
+              onClick={() => turn(1)}
+              disabled={!edges.next}
             >
               <span aria-hidden="true">›</span>
               <span className="sr-only">Następne opinie</span>
             </button>
-          </div>
-        ) : null}
+          ) : null}
+        </div>
       </div>
     </section>
   );

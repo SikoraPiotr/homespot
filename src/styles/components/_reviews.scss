@@ -1,54 +1,58 @@
 @use "../abstracts/tokens" as *;
 @use "../abstracts/mixins" as *;
 
-.reviews__grid {
-  display: grid;
-  gap: $space-4;
-  @include respond-up($bp-sm) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  @include respond-up($bp-lg) {
-    grid-template-columns: repeat(4, 1fr);
-  }
+.reviews__slider {
+  position: relative;
 }
 
-.reviews__panel {
-  display: grid;
-  gap: $space-5;
-}
-
-.reviews__nav {
+.reviews__track {
   display: flex;
-  align-items: center;
-  justify-content: center;
   gap: $space-4;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
-.reviews__page {
-  margin: 0;
-  color: $color-muted-strong;
-  font-family: $font-display;
-  letter-spacing: 0.08em;
+.reviews__track:focus-visible {
+  outline: 2px solid $color-focus;
+  outline-offset: 4px;
 }
 
 .reviews__arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 2.75rem;
-  height: 2.75rem;
-  border: 1px solid rgba($color-cyan, 0.45);
+  width: 3rem;
+  height: 3rem;
+  border: 0;
   border-radius: 999px;
-  background: transparent;
-  color: $color-white;
-  font-size: 1.6rem;
+  background: $color-white;
+  color: $color-oxford;
+  box-shadow: $shadow-soft;
+  font-size: 1.8rem;
   line-height: 1;
   cursor: pointer;
+  transform: translateY(-50%);
+}
+
+.reviews__arrow--prev {
+  left: 0.4rem;
+}
+
+.reviews__arrow--next {
+  right: 0.4rem;
 }
 
 .reviews__arrow:disabled {
-  opacity: 0.35;
+  opacity: 0.4;
   cursor: not-allowed;
 }
 
@@ -64,15 +68,25 @@
 
 .review-card {
   display: flex;
+  flex: 0 0 100%;
   flex-direction: column;
   justify-content: space-between;
   gap: $space-5;
-  height: 100%;
+  height: auto;
   margin: 0;
   padding: $space-5;
+  scroll-snap-align: start;
   border: 1px solid rgba($color-cyan, 0.22);
   border-radius: $radius-m;
   background: rgba($color-surface, 0.55);
+
+  @include respond-up($bp-sm) {
+    flex-basis: calc((100% - #{$space-4}) / 2);
+  }
+
+  @include respond-up($bp-lg) {
+    flex-basis: calc((100% - 3 * #{$space-4}) / 4);
+  }
 }
 
 .review-card__quote {

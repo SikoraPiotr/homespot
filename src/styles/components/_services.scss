@@ -14,3 +14,42 @@
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  border: 1px solid rgba($color-cyan, 0.35);
+  border-radius: 1.25rem;
+  background: $color-white;
+  text-align: center;
+}
+
+.service-card__copy {
+  padding: $space-5 $space-4 $space-4;
+}
+
+.service-card__title {
+  margin: 0;
+  color: $color-cyan-deep;
+  font-size: 1.45rem;
+  line-height: 1.25;
+}
+
+.service-card__text {
+  margin: $space-3 0 0;
+  color: $color-oxford;
+  font-size: 1.02rem;
+  line-height: 1.45;
+}
+
+.service-card__photo {
+  position: relative;
+  height: 12rem;
+  margin-top: auto;
+
+  img {
+    object-fit: cover;
+  }
+}

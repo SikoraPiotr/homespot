@@ -1,0 +1,4 @@
+﻿version=2026-11-25-zespol-uslugi
+git=4cb5215
+built=2026-11-25 10:55
+files=132
