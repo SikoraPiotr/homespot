@@ -22,6 +22,7 @@ export default async function TeamPage() {
         script={content.team.script}
         imageSrc={content.team.pageHeroImage}
         imageAlt={content.team.pageHeroAlt}
+        imagePosition="center 18%"
       />
       <Team content={content.team} />
     </>

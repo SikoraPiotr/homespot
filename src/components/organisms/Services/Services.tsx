@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { SectionHeader } from "@/components/atoms/SectionHeader/SectionHeader";
 import { FlipCard } from "@/components/molecules/FlipCard/FlipCard";
 import { Reveal } from "@/components/molecules/Reveal/Reveal";
@@ -25,10 +26,22 @@ export function Services({ content, showHeader = false }: ServicesProps) {
                 className="flip-card--service flip-card--plain"
                 title={item.title}
                 front={
-                  <div className="flip-card__copy">
-                    <h3 className="flip-card__title">{item.title}</h3>
-                    <p className="flip-card__subtitle">{item.subtitle}</p>
-                  </div>
+                  <>
+                    <div className="flip-card__copy">
+                      <h3 className="flip-card__title">{item.title}</h3>
+                      <p className="flip-card__subtitle">{item.subtitle}</p>
+                    </div>
+                    {item.imageSrc ? (
+                      <div className="flip-card__media flip-card__media--band">
+                        <Image
+                          src={item.imageSrc}
+                          alt={item.imageAlt ?? ""}
+                          fill
+                          sizes="(max-width: 64rem) 100vw, 33vw"
+                        />
+                      </div>
+                    ) : null}
+                  </>
                 }
                 back={<p className="flip-card__text">{item.description}</p>}
               />

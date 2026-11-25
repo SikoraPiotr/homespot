@@ -1,0 +1,4 @@
+﻿version=2026-11-25-uwagi-2
+git=f3c7745
+built=2026-11-25 10:47
+files=123

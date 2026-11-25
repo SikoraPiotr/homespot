@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/atoms/Button/Button";
 import { ButtonLink } from "@/components/atoms/Button/ButtonLink";
+import { AdminMedia } from "@/components/organisms/AdminEditor/AdminMedia";
 import type { ReviewItem, SiteContent } from "@/types/content";
 
 type AdminEditorProps = {
@@ -84,7 +85,9 @@ export function AdminEditor({ initialContent }: AdminEditorProps) {
       <div className="admin__toolbar">
         <div>
           <h1 className="admin__title">Edycja treści</h1>
-          <p className="admin__lead">Zmiany trafiają do pliku JSON na serwerze.</p>
+          <p className="admin__lead">
+            Zdjęcia i teksty zapisują się w treści strony. Na hostingu ze statycznym HTML widać je po kolejnym wydaniu.
+          </p>
         </div>
         <div className="admin__toolbar">
           <ButtonLink href="/" variant="ghost">
@@ -98,6 +101,8 @@ export function AdminEditor({ initialContent }: AdminEditorProps) {
           </Button>
         </div>
       </div>
+
+      <AdminMedia content={content} onChange={setContent} />
 
       <section className="admin__card admin__form">
         <div className="field">

@@ -143,6 +143,10 @@
   object-fit: cover;
 }
 
+.flip-card--team .flip-card__media img {
+  object-position: center 16%;
+}
+
 .flip-card__overlay {
   position: absolute;
   inset: auto 0 0;
@@ -162,16 +166,39 @@
 }
 
 .flip-card--plain.flip-card--service .flip-card__face--front {
-  justify-content: center;
-  align-items: center;
-  padding: $space-5;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: $space-5 $space-5 0;
   background: $color-white;
   text-align: center;
+  overflow: hidden;
+}
+
+.flip-card--plain .flip-card__media--band {
+  position: relative;
+  inset: auto;
+  height: 9.5rem;
+  margin-top: $space-4;
+  margin-inline: calc(#{$space-5} * -1);
+}
+
+.flip-card--plain .flip-card__media--band img {
+  object-position: center;
 }
 
 .flip-card--plain .flip-card__copy {
   position: relative;
   z-index: 1;
+  order: 1;
+}
+
+.flip-card--plain .flip-card__hint {
+  order: 2;
+  margin-top: $space-3;
+}
+
+.flip-card--plain .flip-card__media--band {
+  order: 3;
 }
 
 .flip-card--plain .flip-card__title {

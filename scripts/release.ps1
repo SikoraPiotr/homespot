@@ -64,7 +64,7 @@ $files = Get-ChildItem $siteDir -Recurse -File
 Set-Content -Path (Join-Path $root "releases\LATEST") -Value $Version -Encoding utf8
 
 $winscp = "C:\Program Files (x86)\WinSCP\WinSCP.com"
-$ini = "C:\Users\Piotrecki\Downloads\WinSCP.ini"
+$ini = "C:\Users\Piotrecki\Documents\WinSCP.ini"
 if (-not (Test-Path $winscp)) { throw "Nie ma WinSCP.com. Paczka leży w $siteDir i nie została wgrana." }
 if (-not (Test-Path $ini)) { throw "Nie ma sesji WinSCP. Paczka leży w $siteDir i nie została wgrana." }
 

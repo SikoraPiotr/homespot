@@ -22,7 +22,13 @@ export function HomeTiles({ tiles }: HomeTilesProps) {
               <li>
                 <Link className="home-tiles__card" href={tile.href}>
                   <span className="home-tiles__media" aria-hidden="true">
-                    <Image src={tile.imageSrc} alt="" fill sizes="(max-width: 40rem) 100vw, 33vw" />
+                    <Image
+                      src={tile.imageSrc}
+                      alt=""
+                      fill
+                      sizes="(max-width: 40rem) 100vw, 33vw"
+                      style={{ objectPosition: tile.id === "team" ? "center 18%" : "center" }}
+                    />
                   </span>
                   <span className="home-tiles__veil" aria-hidden="true" />
                   <span className="home-tiles__body">

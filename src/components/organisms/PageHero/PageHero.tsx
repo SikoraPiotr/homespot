@@ -7,13 +7,22 @@ type PageHeroProps = {
   script?: string;
   imageSrc: string;
   imageAlt: string;
+  imagePosition?: string;
 };
 
-export function PageHero({ eyebrow, title, lead, script, imageSrc, imageAlt }: PageHeroProps) {
+export function PageHero({
+  eyebrow,
+  title,
+  lead,
+  script,
+  imageSrc,
+  imageAlt,
+  imagePosition = "center",
+}: PageHeroProps) {
   return (
     <section className="page-hero" aria-labelledby="page-hero-title">
       <div className="page-hero__media" aria-hidden="true">
-        <Image src={imageSrc} alt="" fill priority sizes="100vw" />
+        <Image src={imageSrc} alt="" fill priority sizes="100vw" style={{ objectPosition: imagePosition }} />
       </div>
       <div className="page-hero__veil" aria-hidden="true" />
       <div className="page-hero__content">

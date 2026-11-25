@@ -161,48 +161,48 @@
         "title": "Sprzedaż | Zakup",
         "subtitle": "Dobre decyzje zaczynają się od właściwego partnera.",
         "description": "Prowadzimy transakcje z dbałością o każdy szczegół. Łączymy znajomość rynku, przemyślaną strategię i skuteczne negocjacje, aby pomóc Ci osiągnąć najlepszy możliwy rezultat.",
-        "imageSrc": "/media/home-exterior.jpg",
-        "imageAlt": "Nowoczesny dom jednorodzinny"
+        "imageSrc": "/media/service-sale.jpg",
+        "imageAlt": "Klucze w salonie przygotowanym do sprzedaży"
       },
       {
         "id": "rent",
         "title": "Wynajem | Najem",
         "subtitle": "Właściwa nieruchomość. Właściwi ludzie. Dobre warunki.",
         "description": "Pomagamy znaleźć nieruchomość dopasowaną do Twoich potrzeb lub najemcę, któremu możesz zaufać. Dbamy o sprawny proces, przejrzyste warunki i bezpieczeństwo współpracy.",
-        "imageSrc": "/media/interior-living.jpg",
-        "imageAlt": "Salon w mieszkaniu na wynajem"
+        "imageSrc": "/media/service-rent.jpg",
+        "imageAlt": "Mieszkanie przygotowane na wynajem"
       },
       {
         "id": "management",
         "title": "Zarządzanie najmem",
         "subtitle": "Twoja nieruchomość. Nasza odpowiedzialność.",
         "description": "Zarządzamy najmem kompleksowo, dbając o relacje z najemcami, bieżące sprawy i sprawną obsługę nieruchomości. Ty zachowujesz kontrolę nad swoją inwestycją, oszczędzając czas i energię.",
-        "imageSrc": "/media/apartment-view.jpg",
-        "imageAlt": "Apartament z widokiem"
+        "imageSrc": "/media/service-management.jpg",
+        "imageAlt": "Klucze w zarządzanej nieruchomości"
       },
       {
         "id": "finance",
         "title": "Finansowanie",
         "subtitle": "Kapitał, który otwiera możliwości.",
         "description": "Pomagamy analizować dostępne rozwiązania finansowe i dopasować je do Twoich planów. Wspieramy Cię w przygotowaniu do zakupu, aby decyzje dotyczące finansowania były świadome i przemyślane.",
-        "imageSrc": "/media/office-consult.jpg",
-        "imageAlt": "Spotkanie w biurze"
+        "imageSrc": "/media/service-finance.jpg",
+        "imageAlt": "Model domu i notes na biurku"
       },
       {
         "id": "invest",
         "title": "Inwestycje",
         "subtitle": "Dostrzegamy potencjał. Budujemy wartość.",
         "description": "Analizujemy nieruchomości pod kątem rentowności, ryzyka i możliwości wzrostu wartości. Pomagamy przekładać cele inwestycyjne na konkretne strategie, oparte na danych, doświadczeniu i znajomości rynku.",
-        "imageSrc": "/media/villa-modern.jpg",
-        "imageAlt": "Prestiżowa nieruchomość"
+        "imageSrc": "/media/service-invest.jpg",
+        "imageAlt": "Nowoczesny budynek mieszkalny"
       },
       {
         "id": "analysis",
         "title": "Analiza rynku",
         "subtitle": "Wiedza, która daje przewagę.",
         "description": "Łączymy analizę cen, trendów i lokalnych uwarunkowań, aby lepiej ocenić wartość nieruchomości oraz jej potencjał. Dostarczamy argumentów, które pomagają podejmować decyzje oparte na faktach, a nie przypuszczeniach.",
-        "imageSrc": "/media/kitchen-modern.jpg",
-        "imageAlt": "Nowoczesna kuchnia w mieszkaniu"
+        "imageSrc": "/media/service-analysis.jpg",
+        "imageAlt": "Widok na miasto z okna biura"
       }
     ]
   },
@@ -297,7 +297,7 @@
         "role": "Pośrednik",
         "email": "biuro@homespot.com.pl",
         "phone": "+48 000 000 000",
-        "imageSrc": "/media/team-1.jpg",
+        "imageSrc": "/media/team-member-1.jpg",
         "imageAlt": "Portret członka zespołu Homespot"
       },
       {
@@ -306,7 +306,7 @@
         "role": "Pośrednik",
         "email": "biuro@homespot.com.pl",
         "phone": "+48 000 000 000",
-        "imageSrc": "/media/team-2.jpg",
+        "imageSrc": "/media/team-member-2.jpg",
         "imageAlt": "Portret członka zespołu Homespot"
       },
       {
@@ -315,7 +315,7 @@
         "role": "Pośrednik",
         "email": "biuro@homespot.com.pl",
         "phone": "+48 000 000 000",
-        "imageSrc": "/media/team-3.jpg",
+        "imageSrc": "/media/team-member-3.jpg",
         "imageAlt": "Portret członka zespołu Homespot"
       }
     ]
